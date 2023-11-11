@@ -7,8 +7,6 @@
   --textColor: black;
   --softBg: #101010;
   --softTextColor: #626262;
-  transition: background-color 1s;
-  transition-duration: 300;
 }
 
 
@@ -30,6 +28,7 @@ a {
 .containerA {
   min-height: 100vh;
   background-color: var(--bg);
+  transition: background-color 2s;
   color: var(--textColor);
 }
 
@@ -38,8 +37,6 @@ a {
   --textColor: #ddd;
   --softBg: #1f273a;
   --softTextColor: #a6a6a6;
-  transition: --bg 5s;
-  transition-duration: 300;
 }
 
 .wrapper {
@@ -80,4 +77,13 @@ a {
   .wrapper {
     max-width: 475px;
   }
+}
+
+@keyframes pulse {
+    50% {
+        opacity: .5;
+    }
+}
+.animate-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

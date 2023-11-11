@@ -38,6 +38,10 @@ export const ThemeContextProvider: React.FC<ThemeContextProviderProps> = ({ chil
       localStorage.setItem("theme", theme)
     }, [theme]);
 
+    useEffect(() => {
+      const storedTheme = getFormLocalStorage();
+      if(storedTheme){setTheme(storedTheme)}
+    })
 
     return (
       <ThemeContext.Provider value={{ theme, setTheme, toggle }}>

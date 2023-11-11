@@ -24,6 +24,11 @@ const config: Config = {
       // => @media (max-width: 639px) { ... }
     },
     extend: {
+
+      animation: {
+        'open': 'open 6s linear infinite',
+      },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

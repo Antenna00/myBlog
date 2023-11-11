@@ -87,3 +87,36 @@ a {
 .animate-pulse {
     animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+@keyframes open {
+
+  from {
+    transform: scale(.0);
+
+  }
+  to {
+    transform: scale(1);
+
+  }
+
+}
+
+@keyframes out {
+
+  from {
+    transform: scale(1);
+
+  }
+  to {
+    transform: scale(0);
+  }
+
+}
+
+.anime-in {
+  animation: open 0.4s ease-in-out ;
+}
+
+.anime-out {
+  animation: out 0.4s ease-in;
+}

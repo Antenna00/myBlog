@@ -24,7 +24,7 @@ function Featured() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             libero reprehenderit neque iure sint natus similique consequatur non
             perspiciatis? Officiis quaerat optio officia odio nobis? Alias,
-            unde. Sunt, sint nam.
+            unde. Sunt, sint nam.s
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             libero reprehenderit neque iure sint natus similique consequatur non
             perspiciatis? Officiis quaerat optio officia odio nobis? Alias,

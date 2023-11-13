@@ -19,7 +19,7 @@ function BurgerMenu() {
 
         {/* Button */}
         <div className="hidden lg:flex w-[40px] h-[40px] flex-col bg-cyan-500 rounded-full justify-center
-          cursor-pointer items-center absolute right-20 top-[0.7rem] z-10 
+          cursor-pointer items-center absolute right-20 top-[0.7rem] z-20 
           hover:scale-150 transition-all ease-in-out 
           " onClick={() => menuToggle()}>
             <div className="w-[20px] h-[16px] flex justify-between flex-col">
@@ -32,7 +32,7 @@ function BurgerMenu() {
 
         {/*OVERLAY*/}
         <div className={`${open ? "h-[70vh] w-[60vw]" : "h-0 w-0"} flex absolute overflow-hidden right-[7rem] bg-gray-500 
-        rounded-xl rounded-bl-[50px] transition-all duration-300 justify-center items-center cursor-default`}>
+        rounded-xl rounded-bl-[50px] transition-all duration-300 justify-center items-center cursor-default z-10`}>
             <div>ss</div>
             {/* add anchobi image afterwards */}
             <div className="absolute flex flex-col h-[70vw] w-[50vw] gap-10 text-4xl ">

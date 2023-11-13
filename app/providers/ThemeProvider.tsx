@@ -35,7 +35,7 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
   
   if(mounted)
     return (
-      <div className={theme}>{children}</div>
+      <div className={`${theme} overflow-hidden`}>{children}</div>
     )
   
 }

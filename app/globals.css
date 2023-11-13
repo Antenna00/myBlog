@@ -17,7 +17,7 @@
 
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 a {
@@ -30,6 +30,7 @@ a {
   background-color: var(--bg);
   transition: background-color 2s;
   color: var(--textColor);
+  overflow:hidden;
 }
 
 .dark {
@@ -45,6 +46,7 @@ a {
   margin-right: auto;
   padding-left: 80px;
   padding-right: 80px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1536px) {
@@ -62,7 +64,7 @@ a {
 @media screen and (max-width: 1024px) {
   .wrapper {
     max-width: 768px;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-right: 40px;
   }
 }
@@ -114,9 +116,9 @@ a {
 }
 
 .anime-in {
-  animation: open 0.4s ease-in-out ;
+  animation: open 5s ease-in ;
 }
 
 .anime-out {
-  animation: out 0.4s ease-in;
+  animation: out 100s ease-in;
 }

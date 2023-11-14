@@ -5,7 +5,7 @@ function Featured() {
   return (
     //Feature Container
     <div className="mt-[30px]">
-      <h1 className="text-[96px]">
+      <h1 className="text-[6rem] xl:text-[72px] lg:text-[60px]">
         <p className="underline">
           Welcome to <br /> Antenna's Transmission
         </p>
@@ -14,14 +14,23 @@ function Featured() {
       {/* Post container */}
       <div className="mt-[60px] flex items-center gap-[50px]">
         {/* Image container */}
-        <div className="flex-1 h-[600px] relative bg-slate-200 rounded-2xl">
+        <div className="flex-1 h-[580px] xxxl:h-[600px] lg:hidden xl:h-[400px] lg:h-[300px] md:hidden relative bg-slate-200 rounded-2xl">
           <Image
             src="/antenna2.jpg"
             alt=""
             fill
             className="object-fit rounded-2xl transition-all hover:-rotate-12"
           />
+
         </div>
+        <div className="flex-1 h-[600px] hidden lg:flex md:hidden relative bg-slate-200 rounded-2xl">
+        <Image
+            src="/antenna.jpg"
+            alt=""
+            fill
+            className="object-contain rounded-2xl transition-all hover:-rotate-12"
+          />
+          </div>
         {/* Text Container */}
         <div className="flex-1 flex flex-col gap-[20px] justify-center">
           {/* Post title */}

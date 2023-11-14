@@ -8,6 +8,8 @@ const config: Config = {
   ],
   theme: {
     screens: {
+      xxxl: "1536px",
+
       xxl: { max: "1536px" },
       // => @media (max-width: 1535px) { ... }
 

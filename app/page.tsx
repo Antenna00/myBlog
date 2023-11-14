@@ -9,10 +9,10 @@ import Menu from "./components/menu/Menu";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Featured />
       <CategoryList />
-      <div>
+      <div className="flex gap-12">
         <CardList />
         <Menu />
       </div>

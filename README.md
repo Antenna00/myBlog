@@ -1,6 +1,7 @@
 MyBlog. <br>
 ;sss
 
-<details>
-  
+<details> Stack
+  NextJS
+  Prisma
 </details>

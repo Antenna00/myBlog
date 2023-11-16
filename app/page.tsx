@@ -7,15 +7,17 @@ import CategoryList from "./components/categoryList/CategoryList";
 import CardList from "./components/cardList/CardList";
 import Menu from "./components/menu/Menu";
 
-export default function Home() {
+function Home() {
   return (
-    <div className="">
+    <div>
       <Featured />
       <CategoryList />
-      <div>
+      <div className="flex gap-12">
         <CardList />
         <Menu />
       </div>
     </div>
   );
 }
+
+export default Home;

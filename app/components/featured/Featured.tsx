@@ -19,6 +19,7 @@ function Featured() {
             src="/antenna2.jpg"
             alt=""
             fill
+            priority
             className="object-fit rounded-2xl transition-all hover:-rotate-12"
           />
 

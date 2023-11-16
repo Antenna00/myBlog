@@ -18,11 +18,13 @@
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  cursor:none;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor:none;
 }
 
 .containerA {
@@ -45,6 +47,23 @@ a {
   margin-right: auto;
   padding-left: 80px;
   padding-right: 80px;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
 
 @media screen and (max-width: 1536px) {

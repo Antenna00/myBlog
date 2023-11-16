@@ -4,24 +4,24 @@ import Link from "next/link";
 
 function Card() {
   return (
-    <div className="mb-12 flex gap-12 items-center after:h-[200px] after:relative after:animate-pulse after:gap-0 after:w-[1px] after:bg-green-400">
+    <div className="mb-12 flex gap-12 xl:gap-6 relative items-center after:h-[200px] after:relative after:animate-pulse after:gap-0 after:w-[1px] after:bg-green-400">
       {/* Image Container */}
-      <div className="h-[350px] relative flex-1">
+      <div className="h-[350px] xl:h-[100px] xl:w-[100px] xl:flex-initial lg:hidden relative flex-1">
         <Image src="/p1.jpeg" alt="" fill className="object-cover" />
       </div>
       {/* Text Container */}
-      <div className="flex-1 flex flex-col gap-6">
+      <div className="flex-1 flex flex-col gap-6 xl:gap-3">
         {/* Details */}
         <div className="">
           <span className="text-gray-400">11.02.2023 - </span>
           <span className="text-red-500 font-medium">CULTURE</span>
         </div>
         <Link href="/">
-          <h1 className="text-[30px] font-semibold hover:underline">
+          <h1 className="text-[30px] xl:text-[25px] font-semibold hover:underline">
             Lorem ipsum dolor sit amet consecteturd
           </h1>
         </Link>
-        <p className=" text-base text-[color:var(--softTextColor)]">
+        <p className=" text-base xl:text-sm text-[color:var(--softTextColor)]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
           officiis, porro itaque voluptate ea sapiente deserunt quae pariatur
           accusamus doloremque explicabo fugit repellendus vitae. Consectetur

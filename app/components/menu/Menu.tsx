@@ -1,74 +1,95 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import MenuPosts from "../menuPosts/MenuPosts";
 
 function Menu() {
   return (
-    <div className="flex-[2] gap-10">
+    <div className="flex-[2] flex flex-col my-12 relative md:items-center md:justify-center sm:justify-center sm:items-center">
       {/* Title */}
-      <h2 className="text-base text-gray-500">{"What's Hot"}</h2>
-      <h1 className="text-3xl font-bold">Most Popular</h1>
+      <h1 className="text-3xl font-bold">About Me</h1>
+      {/* About Container */}
+      <div className="h-40 flex gap-4 mt-8">
+        {/* Image Container */}
+        <div className="relative h-32 w-32">
+          <Image src="/profpic.png" fill alt="" className="rounded-3xl"></Image>
+        </div>
 
-      {/* Items Container */}
-      <div className="flex items-center flex-col gap-8 w-full ">
-        <Link href="/" className="flex gap-4 items-center">
-          {/* Image Container */}
-          <div className="relative aspect-square flex-1">
-            <Image src="/p1.jpeg" alt="" fill className="rounded-full object-cover border-gray-200 border-2"></Image>
+        {/* Text Container */}
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center border-2 justify-center px-4">
+            <span className="font-bold">Rin Kitajima</span>
           </div>
-          {/* Text Container */}
-          <div className="flex-[4] flex flex-col gap-1">
-            <span className={`py-[3px] px-2 rounded-full text-xs text-white bg-orange-400 w-max`}>Travel</span>
-            <h3 className=" text-base font-medium text-[color:car(--softTextColor)]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h3>
-            {/* Detail */}
-            <div className="text-xs">
-              <span className="">Jon Doe</span>
-              <span className="text-gray-400"> - 10.03.2023</span>
-            </div>
-          </div>
-        </Link>
 
-        <Link href="/" className="flex gap-4 items-center">
-          {/* Image Container */}
-          <div className="relative aspect-square flex-1">
-            <Image src="/p1.jpeg" alt="" fill className="rounded-full object-cover border-gray-200 border-2"></Image>
-          </div>
-          {/* Text Container */}
-          <div className="flex-[4] flex flex-col gap-1">
-            <span className={`py-[3px] px-2 rounded-full text-xs text-white bg-orange-400 w-max`}>Travel</span>
-            <h3 className=" text-base font-medium text-[color:car(--softTextColor)]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h3>
-            {/* Detail */}
-            <div className="text-xs">
-              <span className="">Jon Doe</span>
-              <span className="text-gray-400"> - 10.03.2023</span>
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/" className="flex gap-4 items-center">
-          {/* Image Container */}
-          <div className="relative aspect-square flex-1">
-            <Image src="/p1.jpeg" alt="" fill className="rounded-full object-cover border-gray-200 border-2"></Image>
-          </div>
-          {/* Text Container */}
-          <div className="flex-[4] flex flex-col gap-1">
-            <span className={`py-[3px] px-2 rounded-full text-xs text-white bg-orange-400 w-max`}>Travel</span>
-            <h3 className=" text-base font-medium text-[color:car(--softTextColor)]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h3>
-            {/* Detail */}
-            <div className="text-xs">
-              <span className="">Jon Doe</span>
-              <span className="text-gray-400"> - 10.03.2023</span>
-            </div>
-          </div>
-        </Link>
+          <span className="font-bold">Skills:</span>
+        </div>
       </div>
 
+      {/* Title */}
+      <h2 className="text-base text-[color:--softTextColor] mt-[35px]">
+        {"What's Hot"}
+      </h2>
+      <h1 className="text-3xl font-bold">Most Popular</h1>
+      <MenuPosts withImage={true}/>
+
+      {/* Category Section Title */}
+      <h1 className="text-3xl font-bold mt-[45px]">Categories</h1>
+      {/* Category List Container */}
+      <div className="flex mt-10 gap-6 flex-wrap md:justify-center md:items-center">
+        {/* category */}
+        <Link href="/blog?cat=style" className="">
+          <span
+            className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-blue-200 w-max`}
+          >
+            Travel
+          </span>
+        </Link>
+
+        {/* category */}
+        <Link href="/blog?cat=style" className="">
+          <span
+            className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-yellow-200 w-max`}
+          >
+            Travel
+          </span>
+        </Link>
+
+        {/* category */}
+        <Link href="/blog?cat=style" className="">
+          <span
+            className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-green-200 w-max`}
+          >
+            Travel
+          </span>
+        </Link>
+
+        {/* category */}
+        <Link href="/blog?cat=style" className="">
+          <span
+            className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-blue-200 w-max`}
+          >
+            Travel
+          </span>
+        </Link>
+
+        {/* category */}
+        <Link href="/blog?cat=style" className="">
+          <span
+            className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-yellow-200 w-max`}
+          >
+            Travel
+          </span>
+        </Link>
+
+        {/* category */}
+        <Link href="/blog?cat=style" className="">
+          <span
+            className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-green-200 w-max`}
+          >
+            Travel
+          </span>
+        </Link>
+      </div>
     </div>
   );
 }

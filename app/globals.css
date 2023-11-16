@@ -21,6 +21,10 @@ body {
   cursor:none;
 }
 
+button {
+  cursor:none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -63,6 +67,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translate(0px, 0px);
   background-color: white;
 }
 

@@ -6,7 +6,7 @@ function CardList() {
   return (
     <div className=" flex flex-col flex-[5]">
       {/* Title */}
-      <h1>Recent Posts</h1>
+      <h1 className="text-3xl font-bold my-12">Recent Posts</h1>
 
       {/* Cards Container */}
       <div>

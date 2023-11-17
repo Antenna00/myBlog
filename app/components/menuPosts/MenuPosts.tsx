@@ -9,10 +9,10 @@ interface test {
 function MenuPosts({ withImage }: test) {
   return (
     //Item container
-    <div className="flex items-center flex-col gap-8 w-full relative mt-[35px] sm:items-center sm:justify-center md:items-center md:justify-center">
-      <Link href="/" className="flex gap-4 items-center relative sm:justify-center sm:items-center">
+    <div className="flex items-center flex-col gap-8 w-full relative mt-[35px]">
+      <Link href="/" className="flex gap-4 items-center relative">
         {/* Image Container */}
-        <div className="relative aspect-square flex-1 sm:flex-initial sm:w-[100px]">
+        <div className="relative aspect-square flex-1 sm:flex-initial md:w-[90px]">
           <Image
             src="/p1.jpeg"
             alt=""
@@ -21,7 +21,7 @@ function MenuPosts({ withImage }: test) {
           ></Image>
         </div>
         {/* Text Container */}
-        <div className="relative flex-[4] sm:flex-initial flex flex-col gap-1 ">
+        <div className="relative flex-[4] md:flex-initial flex flex-col gap-1">
           <span
             className={`py-[3px] px-2 rounded-full text-xs text-black font-semibold bg-green-200 w-max`}
           >
@@ -38,9 +38,9 @@ function MenuPosts({ withImage }: test) {
         </div>
       </Link>
 
-      <Link href="/" className="flex gap-4 items-center">
+      <Link href="/" className="flex gap-4 items-center relative">
         {/* Image Container */}
-        <div className="relative aspect-square flex-1 sm:flex-initial sm:w-[100px]">
+        <div className="relative aspect-square flex-1 sm:flex-initial md:w-[90px]">
           <Image
             src="/p1.jpeg"
             alt=""
@@ -49,9 +49,9 @@ function MenuPosts({ withImage }: test) {
           ></Image>
         </div>
         {/* Text Container */}
-        <div className="flex-[4] sm:flex-initial flex flex-col gap-1">
+        <div className="relative flex-[4] md:flex-initial flex flex-col gap-1">
           <span
-            className={`py-[3px] px-2 rounded-full text-xs text-white bg-orange-400 w-max`}
+            className={`py-[3px] px-2 rounded-full text-xs text-black font-semibold bg-green-200 w-max`}
           >
             Travel
           </span>
@@ -66,9 +66,9 @@ function MenuPosts({ withImage }: test) {
         </div>
       </Link>
 
-      <Link href="/" className="flex gap-4 items-center">
+      <Link href="/" className="flex gap-4 items-center relative">
         {/* Image Container */}
-        <div className="relative aspect-square flex-1 sm:flex-initial sm:w-[100px]">
+        <div className="relative aspect-square flex-1 sm:flex-initial md:w-[90px]">
           <Image
             src="/p1.jpeg"
             alt=""
@@ -77,9 +77,9 @@ function MenuPosts({ withImage }: test) {
           ></Image>
         </div>
         {/* Text Container */}
-        <div className="flex-[4] sm:flex-initial flex flex-col gap-1">
+        <div className="relative flex-[4] md:flex-initial flex flex-col gap-1">
           <span
-            className={`py-[3px] px-2 rounded-full text-xs text-white bg-orange-400 w-max`}
+            className={`py-[3px] px-2 rounded-full text-xs text-black font-semibold bg-green-200 w-max`}
           >
             Travel
           </span>

@@ -35,18 +35,18 @@ function Menu() {
       {/* Category Section Title */}
       <h1 className="text-3xl font-bold mt-[45px]">Categories</h1>
       {/* Category List Container */}
-      <div className="flex mt-10 gap-6 flex-wrap md:justify-center md:items-center">
+      <div className="flex mt-10 gap-6 flex-wrap md:justify-center md:after:w-[90px]">
         {/* category */}
-        <Link href="/blog?cat=style" className="">
+        <Link href="/blog?cat=style" className="w-[90px]">
           <span
-            className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-blue-200 w-max`}
+            className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-blue-200`}
           >
             Travel
           </span>
         </Link>
 
         {/* category */}
-        <Link href="/blog?cat=style" className="">
+        <Link href="/blog?cat=style" className="w-[90px]">
           <span
             className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-yellow-200 w-max`}
           >
@@ -55,7 +55,7 @@ function Menu() {
         </Link>
 
         {/* category */}
-        <Link href="/blog?cat=style" className="">
+        <Link href="/blog?cat=style" className="w-[90px]">
           <span
             className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-green-200 w-max`}
           >
@@ -64,7 +64,7 @@ function Menu() {
         </Link>
 
         {/* category */}
-        <Link href="/blog?cat=style" className="">
+        <Link href="/blog?cat=style" className="w-[90px]">
           <span
             className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-blue-200 w-max`}
           >
@@ -73,7 +73,7 @@ function Menu() {
         </Link>
 
         {/* category */}
-        <Link href="/blog?cat=style" className="">
+        <Link href="/blog?cat=style" className="w-[90px]">
           <span
             className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-yellow-200 w-max`}
           >
@@ -82,7 +82,7 @@ function Menu() {
         </Link>
 
         {/* category */}
-        <Link href="/blog?cat=style" className="">
+        <Link href="/blog?cat=style" className="w-[90px]">
           <span
             className={`py-[6px] px-5 rounded-full text-md text-black font-semibold bg-green-200 w-max`}
           >

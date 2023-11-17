@@ -24,6 +24,9 @@ const config: Config = {
 
       sm: { max: "640px" },
       // => @media (max-width: 639px) { ... }
+      
+      ssm: { max: "450px" },
+      // => @media (max-width: 449px) { ... }
     },
     extend: {
 

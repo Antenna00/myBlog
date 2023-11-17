@@ -7,12 +7,14 @@
   --textColor: black;
   --softBg: #101010;
   --softTextColor: #626262;
+  --borderColor:black;
 }
 
 
 * {
   padding: 0;
   box-sizing: border-box;
+  border-color:var(--borderColor);
 }
 
 body {
@@ -43,6 +45,7 @@ a {
   --textColor: #ddd;
   --softBg: #1f273a;
   --softTextColor: #a6a6a6;
+  --borderColor:transparent;
 }
 
 .wrapper {

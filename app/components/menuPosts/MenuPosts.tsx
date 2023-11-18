@@ -27,7 +27,7 @@ function MenuPosts({ withImage }: test) {
           >
             Travel
           </span>
-          <h3 className=" text-base font-medium text-[color:car(--softTextColor)]">
+          <h3 className="text-base xl:text-sm font-medium text-[color:car(--softTextColor)]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h3>
           {/* Detail */}
@@ -55,7 +55,7 @@ function MenuPosts({ withImage }: test) {
           >
             Travel
           </span>
-          <h3 className=" text-base font-medium text-[color:car(--softTextColor)]">
+          <h3 className=" text-base xl:text-sm font-medium text-[color:car(--softTextColor)]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h3>
           {/* Detail */}
@@ -83,7 +83,7 @@ function MenuPosts({ withImage }: test) {
           >
             Travel
           </span>
-          <h3 className=" text-base font-medium text-[color:car(--softTextColor)]">
+          <h3 className=" text-base xl:text-sm font-medium text-[color:car(--softTextColor)]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h3>
           {/* Detail */}

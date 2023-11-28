@@ -2,12 +2,14 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 
+//TODO Hovering button doesnt trigger the cursor scale
+//TODO Hovering the themetoggle component get cursor
 function Cursor() {
   useEffect(() => {
     const cursor = document.getElementById("custom-cursor");
     const links = document.querySelectorAll("a");
     const cursorTextA = document.getElementById("cursor-text");
-
+    const buttons = document.querySelectorAll("button");
     //
     const onMouseMove = (event: MouseEvent) => {
       gsap.set(cursor, { x: event.clientX - 10, y: event.clientY - 10 });
@@ -22,7 +24,7 @@ function Cursor() {
       if (link.classList.contains("view")) {
         gsap.to(cursor, { scale: 4 });
         if (cursorTextA) {
-          cursorTextA.style.display = "block";
+          // cursorTextA.style.display = "block"; //TODO　これなんでつけてたんだっけ？ => circle内にviewって出るよう？
         }
       } else {
         gsap.to(cursor, { scale: 4 });
@@ -32,7 +34,7 @@ function Cursor() {
     const onMouseLeaveLink = () => {
       gsap.to(cursor, { scale: 1 });
       if (cursorTextA) {
-        cursorTextA.style.display = "none";
+        // cursorTextA.style.display = "none";
       }
     };
 
@@ -40,6 +42,11 @@ function Cursor() {
       link.addEventListener("mouseenter", onMouseEnterLink);
       link.addEventListener("mouseleave", onMouseLeaveLink);
     });
+
+    buttons.forEach((button) => {
+      button.addEventListener("mouseenter", onMouseEnterLink);
+      button.addEventListener("mouseleave", onMouseLeaveLink);
+    })
   });
   return (
     <div id="custom-cursor" className="custom-cursor">

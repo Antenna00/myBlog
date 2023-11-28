@@ -6,18 +6,27 @@ import ThemeToggle from "../themeToggle/ThemeToggle";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
 
 function Navbar() {
-
+//TODO change button to link and set the link to the SNS
   return (
     <div className="flex justify-between items-center gap-7 overflow-hidden">
       {/* Socials */}
-      <div className="flex flex-1 gap-10 cursor-pointer items-center lg:hidden">
+      <div className="flex flex-1 gap-10 items-center lg:hidden">
         <div className="flex gap-[10px] lg:hidden">
-        <Image src="/facebook.png" alt="" width={24} height={24}></Image>
+        <button>
+          <Image className="hover:scale-150 hover:translate-x-5 hover:translate-y-5 hover:absolute transition-all duration-300" 
+          src="/facebook.png" alt="" width={24} height={24}></Image>
+        </button>
+        <button>
         <Image src="/linkedin.png" alt="" width={24} height={24}></Image>
+        </button>
+        <button>
         <Image src="/github.png" alt="" width={24} height={24}></Image>
+        </button>
         </div>
         <div className="flex lg:hidden">
+        <button>
           <ThemeToggle />
+          </button>
         </div>
       </div>
 

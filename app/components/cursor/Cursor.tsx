@@ -10,6 +10,8 @@ function Cursor() {
     const links = document.querySelectorAll("a");
     const cursorTextA = document.getElementById("cursor-text");
     const buttons = document.querySelectorAll("button");
+    const fileInputs = document.querySelectorAll("FileUploader");
+    const textInputs = document.querySelectorAll("input");
     //
     const onMouseMove = (event: MouseEvent) => {
       gsap.set(cursor, { x: event.clientX - 10, y: event.clientY - 10 });
@@ -47,6 +49,7 @@ function Cursor() {
       button.addEventListener("mouseenter", onMouseEnterLink);
       button.addEventListener("mouseleave", onMouseLeaveLink);
     })
+
   });
   return (
     <div id="custom-cursor" className="custom-cursor">

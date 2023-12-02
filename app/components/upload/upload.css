@@ -1,0 +1,40 @@
+.dropArea {
+    margin-top:10px;
+    height:150px;
+    border-color: aqua;
+    border-width: 1px;
+    border-style: dashed;
+}
+
+.drop_zone {
+    cursor:none;
+}
+
+input {
+    cursor:none;
+    background:none;
+    border-width: 1px;
+    border-color: #0658c2;
+    height:40px;
+}
+
+button {
+    background-color: azure;
+    width:max-content;
+    padding:5px 10px;
+    color:black;
+    margin-top: 20px;
+    transition-duration:300ms;
+    transition:all;
+}
+
+button:hover {
+    background-color:antiquewhite;
+
+}
+
+hr {
+    margin-top:40px;
+    margin-right:50px;
+    border-top: 1px solid #8c8b8b;
+}

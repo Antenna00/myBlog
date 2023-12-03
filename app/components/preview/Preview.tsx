@@ -5,12 +5,12 @@ import Comments from "../comments/Comments";
 
 interface previewProps {
   title: string;
-  thumbnail: HTMLImageElement | undefined;
-  mdContent: string;
+  thumbnailFbUrl: string;
+  mdContent: string | ArrayBuffer | null | undefined;
 }
 
 //TODO Receive mdProp or make context
-function Preview({ title, thumbnail, mdContent }: previewProps) {
+function Preview({ title, thumbnailFbUrl, mdContent }: previewProps) {
   return (
     <div className="flex flex-1 flex-col">
       <div className="flex relative justify-center">
@@ -38,7 +38,7 @@ function Preview({ title, thumbnail, mdContent }: previewProps) {
             {/* User */}
             <div className="flex items-center gap-[20px]">
               {/* User Image Container */}
-              <div className="w-[50px] h-[50px] relative">
+              <div className="w-[20px] h-[20px] relative">
                 <Image
                   src="/p1.jpeg"
                   alt=""
@@ -48,18 +48,18 @@ function Preview({ title, thumbnail, mdContent }: previewProps) {
               </div>
               {/* User Text Container */}
               <div className="flex flex-col gap-[1px] text-[color:var(--softTextColor)]">
-                <span className="text-[20px] font-medium xl:text-[15px]">
+                <span className="text-[10px] font-medium xl:text-[15px]">
                   John Doe
                 </span>
-                <span className="xl:text-[13px]">01.01.2024</span>
+                <span className="xl:text-[7px] text-[7px]">01.01.2024</span>
               </div>
             </div>
           </div>
 
           {/* Image Container */}
-          {thumbnail ? (
+          {thumbnailFbUrl ? (
             <div className="flex-1 relative h-[200px]">
-              <Image src={thumbnail.src} alt="" fill className="object-cover" />
+              <Image src={thumbnailFbUrl} alt="" fill className="object-cover" />
             </div>
           ) : (
             <div className="flex-1 relative h-[200px]">
@@ -72,7 +72,7 @@ function Preview({ title, thumbnail, mdContent }: previewProps) {
         <div className="flex gap-[50px] xl:gap-[30px]">
           {/* Post */}
           <div className="flex flex-col flex-[6] mt-[60px]">
-            {mdContent ? (
+            {mdContent && typeof mdContent === 'string' ? (
               //TODO Add react_markdown here
               <div>{mdContent}</div>
             ) : (
@@ -109,7 +109,7 @@ function Preview({ title, thumbnail, mdContent }: previewProps) {
           </div>
           {/* Menu Container */}
           <div className="flex-[2] xl:hidden">
-            <Menu />
+              //TODO TOC component comes here
           </div>
         </div>
       </div>

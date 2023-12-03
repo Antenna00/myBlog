@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "firebase": "^10.7.0",
     "gsap": "^3.12.2",
     "next": "14.0.1",
     "react": "^18",

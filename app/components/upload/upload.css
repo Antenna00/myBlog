@@ -25,7 +25,17 @@ button {
     color:black;
     margin-top: 20px;
     transition-duration:300ms;
-    transition:all;
+    transition:all 300ms;
+}
+
+button[type="submit"] {
+    background-color: azure;
+    width:max-content;
+    padding:5px 10px;
+    color:black;
+    margin-top: 20px;
+    transition-duration:300ms;
+    transition:all 300ms;
 }
 
 button:hover {

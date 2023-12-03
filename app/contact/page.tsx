@@ -13,7 +13,7 @@ function contact() {
     //TODO flex1 でxl >画像追加。
     <div className="mt-14 flex flex-col">
       <p className="text-3xl text-center flex justify-center font-bold">
-        Let's connect<p className="text-red-400">.</p>
+        Let's connect<span className="text-red-400">.</span>
       </p>
 
       <div className="flex justify-center mt-7">

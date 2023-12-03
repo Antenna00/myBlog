@@ -1,5 +1,8 @@
 import React from "react";
 import Image from "next/image";
+
+//TODO Add button transition and fix the issue that cursor appears
+//TODO add ts particles to the background of image
 function Login() {
   return (
     //Container

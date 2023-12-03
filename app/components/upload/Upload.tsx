@@ -216,7 +216,7 @@ function Upload() {
     setThumbnailFbUrl(url);
     setThumbnailUploaded(true);
   };
-
+  //TODO button is becoming white bg
   //Submit markdown, title and category
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     console.log("onSubmit is running")

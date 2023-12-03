@@ -18,29 +18,41 @@ input {
     height:40px;
 }
 
-button {
+.uploadButton {
     background-color: azure;
     width:max-content;
     padding:5px 10px;
+    border-width: 2px;
     color:black;
     margin-top: 20px;
     transition-duration:300ms;
     transition:all 300ms;
 }
 
-button[type="submit"] {
-    background-color: azure;
+.discardButton {
+    background-color: crimson;
     width:max-content;
     padding:5px 10px;
+    border-width: 2px;
     color:black;
     margin-top: 20px;
     transition-duration:300ms;
     transition:all 300ms;
 }
 
-button:hover {
+.uploadButton[type="submit"] {
+    background-color: azure;
+    width:max-content;
+    padding:5px 10px;
+    border-width: 2px;
+    color:black;
+    margin-top: 20px;
+    transition-duration:300ms;
+    transition:all 300ms;
+}
+
+.uploadButton:hover {
     background-color:antiquewhite;
-
 }
 
 hr {

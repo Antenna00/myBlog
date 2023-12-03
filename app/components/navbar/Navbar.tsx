@@ -40,7 +40,7 @@ function Navbar() {
         <ThemeToggle />
         </div>
         <Link href="/" className="lg:hidden">Homepage</Link>
-        <Link href="/" className="lg:hidden">Contact</Link>
+        <Link href="/contact" className="lg:hidden">Contact</Link>
         <Link href="/" className="lg:hidden">About</Link>
 
         <AuthLinks />

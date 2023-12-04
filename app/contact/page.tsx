@@ -1,10 +1,28 @@
 "use client";
-
+import axios, { AxiosResponse } from "axios";
 import React from "react";
 
-//TODO onsubmit時のhandler 
-const onSubmit = () => {
-    // ここからお願いします
+const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form:FormData = new FormData(event.currentTarget);
+    const name:File | string = form.get("name") || "";
+    const mail:File | string = form.get("mail") || "";
+    const subject:File | string = form.get("subject") || "";
+    const message:File | string = form.get("message") || "";
+
+    //リクエストデータ
+    const reqData = {
+      name:name,
+      mail:mail,
+      subject:subject,
+      message:message
+    }
+
+    try{
+      await axios.post("api/sendMail",reqData);
+    } catch(error:any) {
+      console.error(error);
+    }
 };
 
 //TODO メール送信はnodemailerを使用
@@ -30,6 +48,7 @@ function contact() {
                 className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="text"
+                name="name"
                 placeholder="Name"
                 required
               />
@@ -42,6 +61,7 @@ function contact() {
                 className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="text"
+                name="mail"
                 placeholder="Mail"
                 required
               />
@@ -56,6 +76,7 @@ function contact() {
               className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-city"
               type="text"
+              name="subject"
               placeholder="Subject"
               required
             />
@@ -67,6 +88,7 @@ function contact() {
             </label>
             <textarea
               id="message"
+              name="message"
               rows={4}
               className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               placeholder="Message"

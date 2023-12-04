@@ -41,7 +41,7 @@ function Navbar() {
         </div>
         <Link href="/" className="lg:hidden">Homepage</Link>
         <Link href="/contact" className="lg:hidden">Contact</Link>
-        <Link href="/" className="lg:hidden">About</Link>
+        <Link href="/about" className="lg:hidden">About</Link>
 
         <AuthLinks />
         <BurgerMenu />

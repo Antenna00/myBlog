@@ -11,9 +11,11 @@ import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import CodeBlock from "./CodeBlock";
 import './styles.css'
+import YoutubeBlock from "./YoutubeBlock";
 
 
 //TODO Darkmode Lightmode setting if i have time.
+//TODO TRのデザイン
 function PostView() {
   const [markdown, setMarkdown] = useState("");
 
@@ -33,6 +35,7 @@ function PostView() {
         skipHtml={false}
         components={{
           code: CodeBlock,
+          a: ({ node, ...props }) => <YoutubeBlock url={props.href ? props.href : "No href detected"} children={props.children} />
         }
         }
 

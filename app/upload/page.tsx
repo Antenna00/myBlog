@@ -1,9 +1,8 @@
 import React from "react";
 import Upload from "../components/upload/Upload";
 import Image from "next/image";
-function upload() {
-  //TODO Fetch here
 
+function upload() {
 
   return (
     <div className="flex mt-20 w-full flex-col">

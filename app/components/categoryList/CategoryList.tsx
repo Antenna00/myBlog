@@ -21,6 +21,7 @@ function CategoryList() {
         {linkData.map((item, i) => {
           return (
             <Link
+              key={i}
               href={item.path}
               className={`flex items-center gap-[10px] h-20 w-48 justify-center 
               border-green-300 border-2 bg-gray-200 

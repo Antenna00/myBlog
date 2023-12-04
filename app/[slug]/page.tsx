@@ -2,6 +2,7 @@ import React from "react";
 import Menu from "../components/menu/Menu";
 import Image from "next/image";
 import Comments from "../components/comments/Comments";
+import PostView from "../components/postView/PostView";
 
 function SinglePage() {
   return (
@@ -43,7 +44,10 @@ function SinglePage() {
       <div className="flex gap-[50px] xl:gap-[30px]">
         {/* Post */}
         <div className="flex flex-col flex-[6] mt-[60px]">
-          <div>
+          <PostView />
+          
+
+          {/* <div>
             <p className="text-xl xl:text-lg font-light mb-[20px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab optio
               velit sequi minus doloribus, consequatur vitae quod fugiat
@@ -65,7 +69,7 @@ function SinglePage() {
               asperiores tempore veniam veritatis quibusdam maiores libero illo
               mollitia deserunt porro voluptates.
             </p>
-          </div>
+          </div> */}
           <Comments />
         </div>
         {/* Menu Container */}

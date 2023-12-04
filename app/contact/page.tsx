@@ -1,32 +1,39 @@
 "use client";
 import axios, { AxiosResponse } from "axios";
-import React from "react";
+import React, { useState } from "react";
 
-const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const form:FormData = new FormData(event.currentTarget);
-    const name:File | string = form.get("name") || "";
-    const mail:File | string = form.get("mail") || "";
-    const subject:File | string = form.get("subject") || "";
-    const message:File | string = form.get("message") || "";
-
-    //リクエストデータ
-    const reqData = {
-      name:name,
-      mail:mail,
-      subject:subject,
-      message:message
-    }
-
-    try{
-      await axios.post("api/sendMail",reqData);
-    } catch(error:any) {
-      console.error(error);
-    }
-};
 
 //TODO メール送信はnodemailerを使用
 function contact() {
+
+  const [sentStatus, setSentStatus] = useState<boolean>(false)
+  
+const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  const form:FormData = new FormData(event.currentTarget);
+  const name:File | string = form.get("name") || "";
+  const mail:File | string = form.get("mail") || "";
+  const subject:File | string = form.get("subject") || "";
+  const message:File | string = form.get("message") || "";
+
+  //リクエストデータ
+  const reqData = {
+    name:name,
+    mail:mail,
+    subject:subject,
+    message:message
+  }
+
+  try{
+    //TODO axios をpromise内に入れてOKだったときのみsetSentStatus(true)にしてコンポーネントのリロード ＯＲ Formの初期化を行う。
+    await axios.post("api/sendMail",reqData);
+    setSentStatus(true);
+  } catch(error:any) {
+    console.error(error);
+  }
+};
+
+  
   return (
     //TODO flex1 でxl >画像追加。
     <div className="mt-14 flex flex-col">
@@ -105,6 +112,7 @@ function contact() {
             </button>
           </div>
         </form>
+        <p>{sentStatus && "Uploaded!"}</p>     
       </div>
     </div>
   );

@@ -97,7 +97,6 @@ function Page() {
             <div className="flex flex-col relative">
               <div className="bg-yellow-100 h-[50px] w-[50px] rounded-full" />
               <div className="absolute top-14 h-[50px] ">
-                
                 <p className=" font-bold">British International School</p>
               </div>
             </div>

@@ -53,12 +53,6 @@ function Cursor() {
   });
   return (
     <div id="custom-cursor" className="custom-cursor">
-      <span
-        id="cursor-text"
-        className="text-[5px] font-extrabold tracking-[1px] hidden"
-      >
-        View
-      </span>
     </div>
   );
 }

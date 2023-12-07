@@ -36,7 +36,7 @@ function Featured() {
         <div className="flex-1 flex flex-col gap-[20px] justify-center">
           {/* Post title */}
           <h1 className="text-[40px] font-semibold sm:text-[20px]">
-            Lorem ipsum dolor sits amet consectetur adipisicing elit.
+            Lorem ipsum dolor sits amet consectesur adipisicing elit.
           </h1>
           <p className="text-[20px] font-light text-[color:var(--softTextColor)] sm:text-[15px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime

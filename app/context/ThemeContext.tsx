@@ -30,13 +30,22 @@ export const ThemeContextProvider: React.FC<ThemeContextProviderProps> = ({ chil
   const [theme, setTheme] = useState(getFromLocalStorage());
 
   const toggle = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    if(theme === "dark") {
+      setTheme("light")
+      console.log("It is light")
+    }else if(theme === "light") {
+      setTheme("dark");
+      console.log("It is dark")
+    }
   };
 
   useEffect(() => {
+    console.log(theme)
+    
     // Update theme in localStorage on client-side
     if (typeof window !== 'undefined') {
       localStorage.setItem("theme", theme);
+      setTheme(theme);
     }
   }, [theme]);
 

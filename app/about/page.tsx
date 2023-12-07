@@ -4,12 +4,13 @@ import Link from "next/link";
 import { FaFileCode, FaDatabase, FaPaintRoller } from "react-icons/fa";
 import { FaPeopleGroup, FaLanguage } from "react-icons/fa6";
 
+
 const skillData = [
   {
     name: "Programming Languages",
     experience: "3+ Years",
     icon: <FaFileCode size="6em" />,
-    descriptions: "",
+    descriptions: "B",
   },
   {
     name: "SQL",
@@ -27,7 +28,7 @@ const skillData = [
     name: "Languages",
     experience: "3+ Years",
     icon: <FaLanguage size="6em" />, //TODO JSX ELEMENT or ICON iamges
-    descriptions: "",
+    descriptions: "Bilingual in Japanese and English",
   },
   {
     name: "Web Design",
@@ -38,9 +39,8 @@ const skillData = [
 ];
 
 function Page() {
-  console.log("Rendering on the client side:", typeof window !== 'undefined');
+  console.log("Rendering on the client side:", typeof window !== "undefined");
   return (
-    
     <div className="flex w-full h-full flex-col gap-10">
       {/* AboutMe Container */}
       <div className="flex w-full rounded-3xl h-[300px] mt-20 gap-10 relative justify-center px-5 items-center bg-blue-100">
@@ -50,16 +50,16 @@ function Page() {
         </div>
 
         {/* Info container */}
-        <div className="relative text-black flex flex-col gap-5">
+        <div className="relative text-black flex flex-col gap-5 w-[80%]">
           <h1 className="text-3xl font-bold">Antenna</h1>
           <p className="">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste cum
-            facilis tempore in! Saepe magnam quam illo impedit fugit ex,
-            nesciunt amet. Sint sed reprehenderit officiis excepturi, tempora
-            dolor velit.
+            大阪府大阪市出身、中学2年途中からタイのインターナショナルスクールに転学。<br />
+            その後はイギリスのUniversity of East AngliaにてBSc Environmental Scienceを修める。<br />
+            日本に帰国後は環境科学分野での営業職を経てからエンジニアに転職。<br />
+            SES業態で、エンジニアとして主に開発やコンサル業務等を行っている。<br />
           </p>
           <Link href="/contact">
-            <button className=" border-2 border-blue-200 p-2">
+            <button className="transition-all duration-300 border-2 border-blue-200 p-2 hover:bg-blue-300">
               Contact Me
             </button>
           </Link>
@@ -71,9 +71,12 @@ function Page() {
         <h1 className="text-3xl font-bold text-center">SKILLS</h1>
 
         <div className="grid-cols-3 grid-flow-row grid gap-5 mt-5">
-          {skillData.map((data) => {
+          {skillData.map((data, i) => {
             return (
-              <div className="flex flex-1 flex-col h-[300px] border-2 border-blue-700 hover:bg-blue-300 transition-all duration-300 rounded-3xl justify-center items-center">
+              <div
+                key={i}
+                className="flex flex-1 flex-col h-[300px] border-2 border-blue-700 hover:bg-blue-300 transition-all duration-300 rounded-3xl justify-center items-center"
+              >
                 <div className=" flex flex-col relative justify-center items-center gap-5">
                   {/* Icon container */}
                   {data.icon}
@@ -108,9 +111,59 @@ function Page() {
           </div>
         </div>
       </div>
+
+      <div className="timeline">
+        <h1>UL timeline cards</h1>
+        <ul className="">
+          <li className="--accent-color:#41516C">
+            <div className="date">2002</div>
+            <div className="title">Title 1</div>
+            <div className="descr">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
+              itaque hic quibusdam fugiat est numquam harum, accusamus suscipit
+              consequatur laboriosam!
+            </div>
+          </li>
+          <li className="--accent-color:#FBCA3E">
+            <div className="date">2007</div>
+            <div className="title">Title 2</div>
+            <div className="descr">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
+              adipisci nobis nostrum vero nihil veniam.
+            </div>
+          </li>
+          <li className="">
+            <div className="date bg-[color:#E24A68] before:bg-[color:#E24A68] after:bg-[color:#E24A68]">
+              2013
+            </div>
+            <div className="title">Title 3</div>
+            <div className="descr">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+              minima consequuntur soluta placeat iure totam commodi repellendus
+              ea delectus, libero fugit quod reprehenderit, sequi quo, et
+              dolorum saepe nulla hic.
+            </div>
+          </li>
+          <li className="--accent-color:#1B5F8C">
+            <div className="date">2017</div>
+            <div className="title">Title 4</div>
+            <div className="descr">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit,
+              cumque.
+            </div>
+          </li>
+          <li className="--accent-color:#4CADAD">
+            <div className="date">2022</div>
+            <div className="title">Title 5</div>
+            <div className="descr">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              non.
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
 
 export default Page;
-

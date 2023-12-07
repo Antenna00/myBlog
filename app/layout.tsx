@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { getTheme } from "./lib/getTheme";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import { ThemeContextProvider } from "./context/ThemeContext";
@@ -21,20 +21,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeContextProvider>
-          <ThemeProvider>
-          <div className="containerA">
-            <div className="wrapper">
-              <Cursor />
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
+        {/* <ThemeContextProvider>
+          <ThemeProvider> */}
+        <script
+          dangerouslySetInnerHTML={{ __html: getTheme }}
+          
+        />
+        <div className="containerA">
+          <div className="wrapper">
+            <Cursor />
+            <Navbar />
+            {children}
+            <Footer />
           </div>
-          </ThemeProvider>
-        </ThemeContextProvider>
+        </div>
+        {/* </ThemeProvider>
+        </ThemeContextProvider> */}
       </body>
     </html>
   );

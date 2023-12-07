@@ -4,7 +4,10 @@ import Link from "next/link";
 import AuthLinks from "../authLinks/AuthLinks";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
-
+import dynamic from "next/dynamic";
+const SetTheme = dynamic(() => import('../setTheme/SetTheme'), {
+  ssr: false,
+});
 function Navbar() {
 //TODO change button to link and set the link to the SNS
   return (
@@ -24,9 +27,9 @@ function Navbar() {
         </button>
         </div>
         <div className="flex lg:hidden">
-        <button>
-          <ThemeToggle />
-          </button>
+
+          <SetTheme />
+
         </div>
       </div>
 

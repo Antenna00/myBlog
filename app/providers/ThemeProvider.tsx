@@ -25,13 +25,7 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
     setMounted(true);
   }, [])
 
-  // useEffect(() => {
-  //   const storedTheme = localStorage.getItem("theme");
-  //   if (storedTheme && theme !== storedTheme) {
 
-  //     setTheme((theme) => (theme === storedTheme ? theme : storedTheme));
-  //   }
-  // }, []);
   
   if(mounted)
     return (

@@ -38,7 +38,9 @@ const skillData = [
 ];
 
 function Page() {
+  console.log("Rendering on the client side:", typeof window !== 'undefined');
   return (
+    
     <div className="flex w-full h-full flex-col gap-10">
       {/* AboutMe Container */}
       <div className="flex w-full rounded-3xl h-[300px] mt-20 gap-10 relative justify-center px-5 items-center bg-blue-100">
@@ -71,7 +73,7 @@ function Page() {
         <div className="grid-cols-3 grid-flow-row grid gap-5 mt-5">
           {skillData.map((data) => {
             return (
-              <div className="flex flex-1 flex-col h-[300px] border-2 border-blue-700 rounded-3xl justify-center items-center">
+              <div className="flex flex-1 flex-col h-[300px] border-2 border-blue-700 hover:bg-blue-300 transition-all duration-300 rounded-3xl justify-center items-center">
                 <div className=" flex flex-col relative justify-center items-center gap-5">
                   {/* Icon container */}
                   {data.icon}
@@ -93,7 +95,7 @@ function Page() {
         <h1 className="text-3xl font-bold text-center">EDUCATION</h1>
         <div className="my-40 mx-10">
           <div className="relative h-5 bg-blue-600 rounded-full"></div>
-          <div className="flex -mt-8 relative  justify-evenly w-full">
+          <div className="flex -mt-8 relative justify-evenly w-full">
             <div className="flex flex-col relative">
               <div className="bg-yellow-100 h-[50px] w-[50px] rounded-full" />
               <div className="absolute top-14 h-[50px] ">
@@ -111,3 +113,4 @@ function Page() {
 }
 
 export default Page;
+

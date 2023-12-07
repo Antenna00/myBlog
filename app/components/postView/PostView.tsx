@@ -12,6 +12,7 @@ import rehypeSlug from "rehype-slug";
 import CodeBlock from "./CodeBlock";
 import './styles.css'
 import YoutubeBlock from "./YoutubeBlock";
+import BlogImage from "./BlogImage";
 
 
 //TODO Darkmode Lightmode setting if i have time.
@@ -34,6 +35,7 @@ function PostView() {
       <ReactMarkdown
         skipHtml={false}
         components={{
+          img:({ node, ...props}) => <BlogImage src={props.src} alt={props.alt} {...props}/>,
           code: CodeBlock,
           a: ({ node, ...props }) => <YoutubeBlock url={props.href ? props.href : "No href detected"} children={props.children} />
         }

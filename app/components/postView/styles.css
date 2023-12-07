@@ -1,130 +1,195 @@
-
-
 .markdown h1 {
-    position:relative;
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-    font-weight: bold;
-    padding-left: 15px;
+  position: relative;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  font-weight: bold;
+  padding-left: 15px;
+
+  border-bottom:2px solid grey;
+}
+
+.markdown h1::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 55px;
+  background-color: blue;
+  top: 0;
+  left: 0;
+}
+
+.markdown h2 {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+  font-weight: bold;
+}
+
+.markdown h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.1em;
+  margin-top: 0.1em;
+  font-weight: bold;
+}
+
+.markdown details {
+  border: 1px solid gray;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  transition: margin 0.3s ease;
+}
+
+.markdown details:hover {
+  border: 1px solid blue;
+}
+
+.markdown details[open] > summary {
+  list-style-type: "🔽";
+  margin-bottom: 0.5rem;
+}
+
+.markdown details summary {
+  list-style-type: "▶️";
+  transition: margin 0.3s ease;
+}
+
+.markdown blockquote {
+  position:relative;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.markdown blockquote::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color:white;
+  top: 0;
+  left: 0;
+}
+
+.light .markdown blockquote::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color:black;
+  top: 0;
+  left: 0;
+}
+
+.markdown ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  background-color: black; /* Light gray background */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  border: 1px solid #ddd; /* Border to separate the list from the surroundings */
+}
+
+/* Style for ordered list (ol) */
+.markdown ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  background-color: #f9f9f9; /* Lighter gray background */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Style for list items (li) */
+.markdown li {
+  margin-bottom: 0.5em;
+}
+
+/* Style for nested lists */
+.markdown ul ul,
+.markdown ol ol,
+.markdown ul ol,
+.markdown ol ul {
+  margin-top: 0.5em;
+  padding-left: 20px;
+}
+
+/* Style for the table */
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Style for table headers (th) */
+.markdown th {
+  background-color: #333; /* Dark gray background for headers */
+  color: #fff; /* White text for headers */
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Style for table cells (td) */
+.markdown td {
+  background-color: #f2f2f2; /* Light gray background for cells */
+  color: #333; /* Dark gray text for cells */
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Alternate background color for rows for better readability */
+.markdown tr:nth-child(even) {
+  background-color: #ddd; /* Slightly darker gray background for even rows */
+}
+
+/* Horizontal Rule */
+.markdown hr {
+  border: 1px solid; /* Light border color for the rule */
+  margin: 20px 0; /* Add spacing above and below the rule */
+}
+
+/* Hyperlinks */
+.markdown a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove default underline */
+  border-bottom: 1px solid #007bff; /* Add underline on hover */
+  transition: border-bottom 0.3s ease; /* Smooth transition effect */
+}
+
+.markdown a:hover {
+  border-bottom: 2px solid #0056b3; /* Darker underline on hover */
+}
+
+/* Inline Code */
+.markdown code {
+}
+
+/* Task Lists */
+.markdown ul.task-list {
+  list-style-type: none; /* Remove default bullet points for task list */
+}
+
+@media screen and (max-width: 1536px) {
+  .markdown {
   }
+}
 
-  .markdown h1::before {
-    content: ""; 
-    position: absolute;
-    width: 5px;
-    height:55px;
-    background-color: blue;
-    top:0;
-    left:0;
+@media screen and (max-width: 1280px) {
+  .markdown {
   }
+}
 
-  .markdown h2 {
-    font-size: 2.0em;
-    margin-bottom: 0.2em;
-    margin-top: 0.2em;
-    font-weight: bold;
+@media screen and (max-width: 1024px) {
+  .markdown {
   }
+}
 
-  .markdown h3 {
-    font-size: 1.5em;
-    margin-bottom: 0.1em;
-    margin-top: 0.1em;
-    font-weight: bold;
+@media screen and (max-width: 768px) {
+  .markdown {
   }
+}
 
-  .markdown blockquote {
-      background:lightgray;
+@media screen and (max-width: 640px) {
+  .markdown {
   }
-
-
-  .markdown ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    background-color: #f4f4f4; /* Light gray background */
-    border-radius: 8px; /* Rounded corners for a softer look */
-    border: 1px solid #ddd; /* Border to separate the list from the surroundings */
-  }
-
-  /* Style for ordered list (ol) */
-  .markdown ol {
-    list-style-type: decimal;
-    padding-left: 20px;
-    background-color: #f9f9f9; /* Lighter gray background */
-    border-radius: 8px;
-    border: 1px solid #ddd;
-  }
-
-  /* Style for list items (li) */
-  .markdown li {
-    margin-bottom: 0.5em;
-  }
-
-  /* Style for nested lists */
-  .markdown ul ul,
-  .markdown ol ol,
-  .markdown ul ol,
-  .markdown ol ul {
-    margin-top: 0.5em;
-    padding-left: 20px;
-  }
-
-
-
-  /* Style for the table */
-  .markdown table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-
-  /* Style for table headers (th) */
-  .markdown th {
-    background-color: #333; /* Dark gray background for headers */
-    color: #fff; /* White text for headers */
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-  }
-
-  /* Style for table cells (td) */
-  .markdown td {
-    background-color: #f2f2f2; /* Light gray background for cells */
-    color: #333; /* Dark gray text for cells */
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-  }
-
-  /* Alternate background color for rows for better readability */
-  .markdown tr:nth-child(even) {
-    background-color: #ddd; /* Slightly darker gray background for even rows */
-  }
-
-  /* Horizontal Rule */
-  .markdown hr {
-    border: 1px solid; /* Light border color for the rule */
-    margin: 20px 0; /* Add spacing above and below the rule */
-  }
-
-  /* Hyperlinks */
-  .markdown a {
-    color: #007BFF; /* Blue color for links */
-    text-decoration: none; /* Remove default underline */
-    border-bottom: 1px solid #007BFF; /* Add underline on hover */
-    transition: border-bottom 0.3s ease; /* Smooth transition effect */
-  }
-
-  .markdown a:hover {
-    border-bottom: 2px solid #0056b3; /* Darker underline on hover */
-  }
-
-  /* Inline Code */
-  .markdown code {
-
-  }
-
-  /* Task Lists */
-  .markdown ul.task-list {
-    list-style-type: none; /* Remove default bullet points for task list */
-  }
+}

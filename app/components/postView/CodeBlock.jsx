@@ -35,7 +35,7 @@ const CodeBlock = (props) => {
       {isBlockCode && (
         <div>
           <button
-            className={`copy-button ${copied ? "copied" : ""} bg-blue-200`}
+            className={`copy-button ${copied ? "copied" : ""} border-2 border-blue-200 py-1 px-3 hover:bg-blue-200`}
             onClick={handleCopyClick}
           >
             {copied ? "Copied!" : "Copy"}

@@ -1,10 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFileCode, FaDatabase, FaPaintRoller } from "react-icons/fa";
 import { FaPeopleGroup, FaLanguage } from "react-icons/fa6";
-
-
+import "./aboutStyles.css";
 const skillData = [
   {
     name: "Programming Languages",
@@ -39,7 +39,12 @@ const skillData = [
 ];
 
 function Page() {
-  console.log("Rendering on the client side:", typeof window !== "undefined");
+  const [language, setLanguage] = useState("English");
+
+  const toggleLanguage = () => {
+    setLanguage(language !== "English" ? "English" : "Japanese");
+  };
+
   return (
     <div className="flex w-full h-full flex-col gap-10">
       {/* AboutMe Container */}
@@ -51,18 +56,40 @@ function Page() {
 
         {/* Info container */}
         <div className="relative text-black flex flex-col gap-5 w-[80%]">
-          <h1 className="text-3xl font-bold">Antenna</h1>
-          <p className="">
-            大阪府大阪市出身、中学2年途中からタイのインターナショナルスクールに転学。<br />
-            その後はイギリスのUniversity of East AngliaにてBSc Environmental Scienceを修める。<br />
-            日本に帰国後は環境科学分野での営業職を経てからエンジニアに転職。<br />
-            SES業態で、エンジニアとして主に開発やコンサル業務等を行っている。<br />
-          </p>
-          <Link href="/contact">
-            <button className="transition-all duration-300 border-2 border-blue-200 p-2 hover:bg-blue-300">
-              Contact Me
+          <h1 className="text-3xl font-bold">Antenna's Profile</h1>
+          {language !== "English" ? (
+            <p className="">
+              大阪府大阪市出身、中学2年途中からタイのインターナショナルスクールに転学。
+              <br />
+              その後はイギリスのUniversity of East AngliaにてBSc Environmental
+              Scienceを修める。
+              <br />
+              日本に帰国後は環境科学分野での営業職を経てからエンジニアに転職。
+              <br />
+              SES業態で、エンジニアとして主に開発やコンサル業務等を行っている。
+              <br />
+            </p>
+          ) : (
+            <p className="">
+              My handlename is Antenna.
+              <br />I currently work as IT Consultant/Engineer/PM for Japanese
+              firm. <br />
+              Most of the work I do now is not directl
+            </p>
+          )}
+          <div className="flex justify-between">
+            <Link href="/contact">
+              <button className="transition-all duration-300 border-2 border-blue-200 p-2 hover:bg-blue-300">
+                Contact Me
+              </button>
+            </Link>
+            <button
+              className="transition-all duration-300 border-2 border-red-200 p-2 hover:bg-red-300"
+              onClick={toggleLanguage}
+            >
+              Language
             </button>
-          </Link>
+          </div>
         </div>
       </div>
       <hr />
@@ -93,47 +120,30 @@ function Page() {
         </div>
       </div>
 
-      {/* Education */}
-      <div className="flex flex-col">
-        <h1 className="text-3xl font-bold text-center">EDUCATION</h1>
-        <div className="my-40 mx-10">
-          <div className="relative h-5 bg-blue-600 rounded-full"></div>
-          <div className="flex -mt-8 relative justify-evenly w-full">
-            <div className="flex flex-col relative">
-              <div className="bg-yellow-100 h-[50px] w-[50px] rounded-full" />
-              <div className="absolute top-14 h-[50px] ">
-                <p className=" font-bold">British International School</p>
-              </div>
-            </div>
-            <div className=" bg-yellow-100 h-[50px] w-[50px] rounded-full"></div>
-            <div className=" bg-yellow-100 h-[50px] w-[50px] rounded-full"></div>
-            <div className=" bg-yellow-100 h-[50px] w-[50px] rounded-full"></div>
-          </div>
-        </div>
-      </div>
+      <h1 className="text-3xl font-bold text-center">BIOGRAPHY</h1>
 
       <div className="timeline">
-        <h1>UL timeline cards</h1>
         <ul className="">
-          <li className="--accent-color:#41516C">
-            <div className="date">2002</div>
-            <div className="title">Title 1</div>
-            <div className="descr">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
-              itaque hic quibusdam fugiat est numquam harum, accusamus suscipit
-              consequatur laboriosam!
+          <li className="">
+            <div className="date after:border-[0.3px] bg-[color:#41516C] before:bg-[color:#41516C] after:bg-[color:#41516C">
+              2017
             </div>
-          </li>
-          <li className="--accent-color:#FBCA3E">
-            <div className="date">2007</div>
-            <div className="title">Title 2</div>
+            <div className="title underline font-bold">イーストアングリア大学：入学</div>
             <div className="descr">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
-              adipisci nobis nostrum vero nihil veniam.
+              国際バカロレア資格を取得後はイギリスのイーストアングリア大学に進学する。
+              2011年の東日本大震災の被災を遠方からニュースで連日聞く中で、
+              環境科学を学びたい意志を強くもち、その分野の見識が強い、イーストアングリア大学で環境科学を専攻する。
             </div>
           </li>
           <li className="">
-            <div className="date bg-[color:#E24A68] before:bg-[color:#E24A68] after:bg-[color:#E24A68]">
+            <div className="date after:border-[0.3px] bg-[color:#FBCA3E] before:bg-[color:#FBCA3E] after:bg-[color:#FBCA3E]">
+              2020
+            </div>
+            <div className="title">Title 2</div>
+            <div className="descr">University of East Angliaに入学。</div>
+          </li>
+          <li className="">
+            <div className="date after:border-[0.3px] after:border-black bg-[color:#E24A68] before:bg-[color:#E24A68] after:bg-[color:#E24A68]">
               2013
             </div>
             <div className="title">Title 3</div>
@@ -144,8 +154,10 @@ function Page() {
               dolorum saepe nulla hic.
             </div>
           </li>
-          <li className="--accent-color:#1B5F8C">
-            <div className="date">2017</div>
+          <li className=" ">
+            <div className="date after:border-[0.3px] after:border-black bg-[color:#1B5F8C] before:bg-[color:#1B5F8C] after:bg-[color:#1B5F8C]">
+              2017
+            </div>
             <div className="title">Title 4</div>
             <div className="descr">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit,

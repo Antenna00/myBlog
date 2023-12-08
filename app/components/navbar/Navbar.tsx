@@ -38,7 +38,7 @@ function Navbar() {
       </div>
 
       {/* Links */}
-      <div className="flex gap-[10px] flex-1 lg:flex justify-between cursor-pointer items-center xl:text-[15px] lg:text-[14px] md:text-[12px]">
+      <div className="flex gap-[10px] flex-1 lg:flex justify-between items-center xl:text-[15px] lg:text-[14px] md:text-[12px]">
         <div className="hidden lg:flex">
         <ThemeToggle />
         </div>

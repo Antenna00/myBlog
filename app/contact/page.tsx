@@ -1,13 +1,13 @@
 "use client";
 import axios, { AxiosResponse } from "axios";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 
-//TODO メール送信はnodemailerを使用
 function contact() {
 
-  const [sentStatus, setSentStatus] = useState<boolean>(false)
-  
+  const [sentStatus, setSentStatus] = useState<boolean>(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
 const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   const form:FormData = new FormData(event.currentTarget);
@@ -25,9 +25,9 @@ const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
   }
 
   try{
-    //TODO axios をpromise内に入れてOKだったときのみsetSentStatus(true)にしてコンポーネントのリロード ＯＲ Formの初期化を行う。
     await axios.post("api/sendMail",reqData);
     setSentStatus(true);
+    formRef.current?.reset();
   } catch(error:any) {
     console.error(error);
   }
@@ -41,8 +41,9 @@ const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
         Let's connect<span className="text-red-400">.</span>
       </p>
 
-      <div className="flex justify-center mt-7">
+      <div className="flex justify-center mt-7 flex-col items-center">
         <form
+          ref={formRef}
           className="flex flex-col w-full max-w-lg gap-8"
           onSubmit={onSubmit}
         >
@@ -52,7 +53,7 @@ const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
                 name
               </label>
               <input
-                className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="text"
                 name="name"
@@ -65,7 +66,7 @@ const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
                 mail
               </label>
               <input
-                className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="text"
                 name="mail"
@@ -80,7 +81,7 @@ const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
               Subject
             </label>
             <input
-              className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="appearance-none block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-city"
               type="text"
               name="subject"
@@ -112,7 +113,7 @@ const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
             </button>
           </div>
         </form>
-        <p>{sentStatus && "Uploaded!"}</p>     
+        <p className="bg-yellow-200 text-black px-2 rounded-full">{sentStatus && "🔍Your Message is Sent. Thank You!"}</p>     
       </div>
     </div>
   );

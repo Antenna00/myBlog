@@ -1,15 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Title from "./Title";
 
 function Featured() {
   return (
     //Feature Container
     <div className="mt-[30px]">
-      <h1 className="text-[6rem] xl:text-[72px] lg:text-[60px] sm:text-[40px]">
-        <p className="underline">
-          Welcome to <br /> Antenna's Transmission
-        </p>
-      </h1>
+      <Title />
 
       {/* Post container */}
       <div className="mt-[60px] flex items-center gap-[50px]">

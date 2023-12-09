@@ -19,7 +19,7 @@ function Comments() {
             placeholder="write a comment here..."
             id=""
             cols={30}
-            className="p-[20px] w-full border-[1px] text-black"
+            className="p-[20px] w-full border-[1px]"
           ></textarea>
           <button className="py-[16px] px-[20px] bg-green-500 text-white font-bold border-none rounded-md cursor-pointer">
             Send

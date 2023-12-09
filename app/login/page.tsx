@@ -1,9 +1,28 @@
-import React from "react";
+"use client"
+
+import React, { useEffect } from "react";
 import Image from "next/image";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 //TODO Add button transition and fix the issue that cursor appears
 //TODO add ts particles to the background of image
 function Login() {
+  const {data, status} = useSession();
+  const router = useRouter();
+  
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/");
+    }
+  }, [status, router]);
+  
+  if(status === "loading") {
+    return <div className="">Loading...</div>
+  }
+
+
   return (
     //Container
     <div className="flex items-center justify-center mt-[60px]">
@@ -26,7 +45,7 @@ function Login() {
           <h1 className="text-[35px] text-center font-bold underline">Login</h1>
           <div className="flex flex-col gap-24 [&_div]:text-center [&_div:nth-child(1)]:bg-red-500 [&_div:nth-child(2)]:bg-black [&_div:nth-child(3)]:bg-blue-500">
             {/* Google Login */}
-            <div className="p-[20px] w-[200px] rounded-md border-none text-white font-bold cursor-pointer">
+            <div className="p-[20px] w-[200px] rounded-md border-none text-white font-bold cursor-pointer" onClick={() => signIn("google")}>
               Sign in with Google
             </div>
             {/* Github Login */}

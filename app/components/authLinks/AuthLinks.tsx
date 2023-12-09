@@ -4,10 +4,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
+import { signOut, useSession } from "next-auth/react";
 
 function AuthLinks() {
-  const status = "notauthenticated";
+
   const [open, setOpen] = useState(false);
+  const {data, status} = useSession();
 
   const menuToggle = () => {
     setOpen(open ? false : true);
@@ -15,11 +17,11 @@ function AuthLinks() {
   
   return (
     <div className="flex">
-      {status === "notauthenticated" ? (<Link className="flex lg:hidden" href="/login">Login</Link>
+      {status !== "authenticated" ? (<Link className="flex lg:hidden" href="/login">Login</Link>
       ) : (
         <>
             <Link href="/write">Write</Link>
-            <span className="flex gap-[10px] cursor-pointer"> Logout </span>
+            <span className="flex gap-[10px] cursor-pointer" onClick={() => signOut({ redirect: true, callbackUrl: '/about' })}> Logout </span>
         </>
       )}
     </div>

@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import { ThemeContextProvider } from "./context/ThemeContext";
 import ThemeProvider from "./providers/ThemeProvider";
 import Cursor from "./components/cursor/Cursor";
+import AuthProvider from "./providers/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,11 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <AuthProvider>
         {/* <ThemeContextProvider>
           <ThemeProvider> */}
         <script
           dangerouslySetInnerHTML={{ __html: getTheme }}
-          
         />
         <div className="containerA">
           <div className="wrapper">
@@ -39,6 +40,7 @@ export default function RootLayout({
         </div>
         {/* </ThemeProvider>
         </ThemeContextProvider> */}
+        </AuthProvider>
       </body>
     </html>
   );

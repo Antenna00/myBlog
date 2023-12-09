@@ -20,7 +20,7 @@ function AuthLinks() {
       {status !== "authenticated" ? (<Link className="flex lg:hidden" href="/login">Login</Link>
       ) : (
         <>
-            <Link href="/write">Upload</Link>
+            <Link href="/write">Uploads</Link>
             <span className="flex gap-[10px] cursor-pointer" onClick={() => signOut({ redirect: true, callbackUrl: '/about' })}> Logout </span>
         </>
       )}

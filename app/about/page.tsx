@@ -10,13 +10,13 @@ const skillData = [
     name: "Programming Languages",
     experience: "3+ Years",
     icon: <FaFileCode size="6em" />,
-    descriptions: "B",
+    descriptions: "Java, Javascript, Typescript, HTML/CSS, PHP",
   },
   {
     name: "SQL",
     experience: "3+ Years",
     icon: <FaDatabase size="6em" />, //TODO JSX ELEMENT or ICON iamges
-    descriptions: "",
+    descriptions: "mySQL, mongoDB, OracleDB",
   },
   {
     name: "Project Management",
@@ -34,7 +34,13 @@ const skillData = [
     name: "Web Design",
     experience: "3+ Years",
     icon: <FaPaintRoller size="6em" />, //TODO JSX ELEMENT or ICON iamges
-    descriptions: "",
+    descriptions: "Figma",
+  },
+  {
+    name: "Framework",
+    experience: "3+ Years",
+    icon: <FaPaintRoller size="6em" />, //TODO JSX ELEMENT or ICON iamges
+    descriptions: "Spring, WPF, NextJS, React, Laravel",
   },
 ];
 
@@ -120,53 +126,57 @@ function Page() {
         </div>
       </div>
 
-      <h1 className="text-3xl font-bold text-center">BIOGRAPHY</h1>
+      <h1 className="text-3xl font-bold text-center mt-10">BIOGRAPHY</h1>
 
       <div className="timeline">
         <ul className="">
           <li className="">
-            <div className="date after:border-[0.3px] bg-[color:#41516C] before:bg-[color:#41516C] after:bg-[color:#41516C">
+            <div className="date after:border-[0.3px] bg-[color:#41516C] before:bg-[color:#41516C] after:bg-[color:black]">
               2017
             </div>
-            <div className="title underline font-bold">イーストアングリア大学：入学</div>
+            <div className="title underline font-bold">
+              イーストアングリア大学：入学
+            </div>
             <div className="descr">
               国際バカロレア資格を取得後はイギリスのイーストアングリア大学に進学する。
               2011年の東日本大震災の被災を遠方からニュースで連日聞く中で、
-              環境科学を学びたい意志を強くもち、その分野の見識が強い、イーストアングリア大学で環境科学を専攻する。
+              環境科学を学びたい意志を強くもち、その分野で見識の深い、イーストアングリア大学で環境科学を専攻する。
             </div>
           </li>
           <li className="">
             <div className="date after:border-[0.3px] bg-[color:#FBCA3E] before:bg-[color:#FBCA3E] after:bg-[color:#FBCA3E]">
               2020
             </div>
-            <div className="title">Title 2</div>
-            <div className="descr">University of East Angliaに入学。</div>
+            <div className="title underline font-bold">日本に帰国後就職</div>
+            <div className="descr">
+              イーストアングリア大学を卒業後は日本に帰国し、太陽光発電機器の技術営業職に就くが、
+              営業として技術に関わるに連れて自らモノづくりに携わりたいという気持ちが強くなっていき、SES事業会社、S社へ転職する。
+            </div>
           </li>
           <li className="">
             <div className="date after:border-[0.3px] after:border-black bg-[color:#E24A68] before:bg-[color:#E24A68] after:bg-[color:#E24A68]">
-              2013
+              2021
             </div>
-            <div className="title">Title 3</div>
+            <div className="title underline font-bold">某警察署　交通事故管理システム</div>
             <div className="descr">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-              minima consequuntur soluta placeat iure totam commodi repellendus
-              ea delectus, libero fugit quod reprehenderit, sequi quo, et
-              dolorum saepe nulla hic.
+              APとして改修案件に開発工程から携わる。
+              ウォーターフォール開発の中で設計書修正、開発着手からテスト設計や実施まで幅広く関わる。
+              技術スタック：Spring Framework, ThymeLeaf, MyBatis, 
             </div>
           </li>
           <li className=" ">
             <div className="date after:border-[0.3px] after:border-black bg-[color:#1B5F8C] before:bg-[color:#1B5F8C] after:bg-[color:#1B5F8C]">
-              2017
+              2022
             </div>
-            <div className="title">Title 4</div>
+            <div className="title underline font-bold">某市役所　財務および旅費管理システム</div>
             <div className="descr">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit,
-              cumque.
+              改修案件に開発工程から携わる。
+              WBSの管理を始め、開発工程にも自ら着手する。
             </div>
           </li>
-          <li className="--accent-color:#4CADAD">
-            <div className="date">2022</div>
-            <div className="title">Title 5</div>
+          <li className="">
+            <div className="date after:border-[0.3px] after:border-black bg-[color:#4CADAD] before:bg-[color:#4CADAD] after:bg-[color:#4CADAD]">2023</div>
+            <div className="title underline font-bold">某自動車会社　サービス運用準備</div>
             <div className="descr">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit,
               non.

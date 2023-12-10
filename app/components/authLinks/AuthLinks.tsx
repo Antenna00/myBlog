@@ -21,7 +21,7 @@ function AuthLinks() {
       ) : (
         <>
             <Link href="/write">Uploads</Link>
-            <span className="flex gap-[10px] cursor-pointer" onClick={() => signOut({ redirect: true, callbackUrl: '/about' })}> Logout </span>
+            <span className="flex gap-[10px] cursor-pointer" onClick={() => signOut({ redirect: true, callbackUrl: '/' })}> Logout </span>
         </>
       )}
     </div>

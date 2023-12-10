@@ -11,7 +11,7 @@ function Login() {
   const {data, status} = useSession();
   const router = useRouter();
   
-
+  
   useEffect(() => {
     if (status === "authenticated") {
       router.push("/");

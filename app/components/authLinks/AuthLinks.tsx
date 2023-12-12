@@ -9,7 +9,7 @@ import { signOut, useSession } from "next-auth/react";
 function AuthLinks() {
 
   const [open, setOpen] = useState(false);
-  const {data, status} = useSession();
+  const {status} = useSession();
 
   const menuToggle = () => {
     setOpen(open ? false : true);

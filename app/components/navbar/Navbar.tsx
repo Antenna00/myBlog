@@ -8,6 +8,7 @@ import dynamic from "next/dynamic";
 const SetTheme = dynamic(() => import('../setTheme/SetTheme'), {
   ssr: false,
 });
+
 function Navbar() {
 //TODO change button to link and set the link to the SNS
   return (

@@ -46,7 +46,7 @@ function ThemeToggle() {
   return (
     <div className=" relative flex w-[40px] h-[20px]
     rounded-[50px] items-center justify-between animate-pulse hover:border-red-700 border-[1px]" 
-    style={theme === "dark" ? {background:"white"} : {right:1, background:"#0f172a"}} onClick={() => toggles()}>
+    style={theme === "dark" ? {background:"white"} : {right:1, background:"#0f172a"}}>
       <Image src="/moon.png" alt="" width={12} height={12} className=" pl-1"></Image>
       {/* ball */}
       <div className={`absolute w-[15px] h-[15px] rounded-[50%] `} style={theme === "dark" ? {transition:"all 3s", left:1, background:"black"} : {transition:"all 3s", right:1, background:"white"}}></div>

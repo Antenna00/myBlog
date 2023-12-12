@@ -49,7 +49,7 @@ function Login() {
               Sign in with Google
             </div>
             {/* Github Login */}
-            <div className="p-[20px] w-[200px] rounded-md border-none text-white font-bold cursor-pointer">
+            <div className="p-[20px] w-[200px] rounded-md border-none text-white font-bold cursor-pointer" onClick={() => signIn("github")}>
               Sign in with Github
             </div>
             {/* Facebook Login */}

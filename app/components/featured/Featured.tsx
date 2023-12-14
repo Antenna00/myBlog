@@ -13,7 +13,7 @@ function Featured() {
         {/* Image container */}
         <div className="flex-1 h-[580px] xxxl:h-[600px] lg:hidden xl:h-[400px] lg:h-[300px] md:hidden relative bg-slate-200 rounded-2xl">
           <Image
-            src="/TestImage.png"
+            src="/antora/antora_code.png"
             alt=""
             fill
             priority

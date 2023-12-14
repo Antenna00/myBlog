@@ -56,8 +56,8 @@ function Page() {
       {/* AboutMe Container */}
       <div className="flex w-full rounded-3xl h-[300px] mt-20 gap-10 relative justify-center px-5 items-center bg-blue-100">
         {/* Iamge Container */}
-        <div className="relative h-[200px] w-[500px] flex">
-          <Image src="/profpic.png" alt="" fill className=" object-cover" />
+        <div className="relative flex">
+          <Image src="/antora/antora_prof.png" alt="" width={400} height={400} className="relative object-fit rounded-full" />
         </div>
 
         {/* Info container */}

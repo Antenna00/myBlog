@@ -1,7 +1,7 @@
 "use client";
 import axios, { AxiosResponse } from "axios";
 import React, { useRef, useState } from "react";
-
+import Image from "next/image";
 
 function contact() {
 
@@ -36,6 +36,10 @@ const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
   
   return (
     //TODO flex1 でxl >画像追加。
+    <div className="flex justify-evenly">
+      <div className=" mt-14">
+        <Image src="/antora/antora_smile.jpg" width={500} height={500} alt="" className="rounded-3xl"/>
+      </div>
     <div className="mt-14 flex flex-col">
       <p className="text-3xl text-center flex justify-center font-bold">
         Let's connect<span className="text-red-400">.</span>
@@ -115,6 +119,7 @@ const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
         </form>
         <p className="bg-yellow-200 text-black px-2 rounded-full">{sentStatus && "🔍Your Message is Sent. Thank You!"}</p>     
       </div>
+    </div>
     </div>
   );
 }

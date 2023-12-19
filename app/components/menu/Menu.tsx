@@ -20,7 +20,7 @@ function Menu() {
       <MenuPosts withImage={true}/>
 
       {/* Category Section Title */}
-      <h1 className="text-3xl font-bold mt-[45px] xl:text-2xl">Categories</h1>
+      <h1 className="text-3xl font-bold mt-[45px] xl:text-2xl">Tags</h1>
       {/* Category List Container */}
       <div className="flex mt-10 gap-6 flex-wrap md:justify-center md:after:w-[90px]">
         {/* category */}

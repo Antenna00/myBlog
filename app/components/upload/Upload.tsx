@@ -465,7 +465,7 @@ function Upload() {
   useEffect(() => {
     // console.log()
   }, []);
-
+  //TODO Add the functionality to add maincategory and tags
   return (
     <div className="flex">
       <div className="flex flex-1 rounded-xl w-max h-max flex-col gap-10">

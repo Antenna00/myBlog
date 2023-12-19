@@ -65,6 +65,12 @@ model Category {
   Posts Post[]
 }
 
+model Tag {
+  id String @id @default(cuid())
+  name String @unique
+  Posts Post[]
+}
+
 model Post {
   id           String   @id @default(cuid())
   slug         String   @unique
@@ -79,8 +85,10 @@ model Post {
   dateUploaded DateTime @default(now())
   dateUpdated  DateTime @updatedAt
 
+  tags Tag[]
   user User     @relation(fields: [userEmail], references: [email])
   cat  Category @relation(fields: [catSlug], references: [slug])
+
 
   comments Comment[]
 }

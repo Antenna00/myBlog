@@ -2,14 +2,12 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
-//Add changing color feature with borderColor and bgColor
-const linkData = [
-  { name: "Coding", path: "/blog?cat=style", image: "/style.png", borderColor:"border-green-300", bgColor:"bg-green-300" },
-  { name: "Cyber Security", path: "/blog?cat=style", image: "/style.png" },
-  { name: "Infrastructure", path: "/blog?cat=style", image: "/style.png" },
-  { name: "Database", path: "/blog?cat=style", image: "/style.png" },
-  { name: "Algorithm", path: "/blog?cat=style", image: "/style.png" },
-];
+type categories =   {
+  id: string;
+  slug: string;
+  title: string;
+  img: string;
+}
 
 const getCategoriesData = async () => {
   const res = await fetch("http://localhost:3000/api/categories", {
@@ -24,21 +22,21 @@ const getCategoriesData = async () => {
 }
 
 async function CategoryList() {
-  const data = await getCategoriesData();
-  console.log(data)
+  const data: categories[] = await getCategoriesData();
+
   return (
     //Container
     <div className="flex flex-col h-max">
 
       {/* Title */}
-      <h1 className="my-12 text-3xl font-bold">Popular Categories</h1>      
+      <h1 className="my-12 text-3xl font-bold">Main Categories</h1>      
 
       <div className=" justify-between flex-wrap flex gap-[20px] lg:after:w-48">
-        {data.map((item:any, i:number) => {
+        {data.map((item, i:number) => {
           return (
             <Link
               key={i}
-              href={"/blog?cat=style"}
+              href={`/blog?cat=${item.slug}`}
               className={`flex items-center gap-[10px] h-20 w-48 justify-center 
               border-green-300 border-2 bg-gray-200 
               hover:bg-green-200 transition-all duration-300 rounded-2xl sm:w-full`}
@@ -52,7 +50,7 @@ async function CategoryList() {
                 />
               </div>
 
-              <p className=" text-black font-bold uppercase">{item.title}</p>
+              <p className=" text-black font-bold capitalize">{item.title}</p>
             </Link>
           );
         })}

@@ -1,13 +1,17 @@
 "use client";
 import React, { useEffect } from "react";
 import gsap from "gsap";
-
-//TODO Hovering button doesnt trigger the cursor scale
-//TODO Hovering the themetoggle component get cursor
-function Cursor() {
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+function Cursor() { 
+  const cursorRef = React.useRef(null);
+  const router = useRouter();
+  const path = usePathname();
   useEffect(() => {
+    console.log("mounted")
     const cursor = document.getElementById("custom-cursor");
     const links = document.querySelectorAll("a");
+    const nextlinks = document.querySelectorAll("Link");
     const cursorTextA = document.getElementById("cursor-text");
     const buttons = document.querySelectorAll("button");
     const fileInputs = document.querySelectorAll("FileUploader");
@@ -15,30 +19,28 @@ function Cursor() {
     //
     const onMouseMove = (event: MouseEvent) => {
       gsap.set(cursor, { x: event.clientX - 10, y: event.clientY - 10 });
+  
     };
 
     document.addEventListener("mousemove", onMouseMove);
     //
 
-    const onMouseEnterLink = (event: MouseEvent) => {
-      const link = event.target as HTMLAnchorElement;
+    const onMouseEnterLink = () => {
+      console.log("in")
+        gsap.to(cursor, { scale: 4 });
 
-      if (link.classList.contains("view")) {
-        gsap.to(cursor, { scale: 4 });
-        if (cursorTextA) {
-          // cursorTextA.style.display = "block"; //TODO　これなんでつけてたんだっけ？ => circle内にviewって出るよう？
-        }
-      } else {
-        gsap.to(cursor, { scale: 4 });
-      }
     };
 
     const onMouseLeaveLink = () => {
+      console.log("out")
       gsap.to(cursor, { scale: 1 });
-      if (cursorTextA) {
-        // cursorTextA.style.display = "none";
-      }
+
     };
+
+    nextlinks.forEach((link) => {
+      link.addEventListener("mouseenter", onMouseEnterLink);
+      link.addEventListener("mouseleave", onMouseLeaveLink);
+    });
 
     links.forEach((link) => {
       link.addEventListener("mouseenter", onMouseEnterLink);
@@ -50,7 +52,8 @@ function Cursor() {
       button.addEventListener("mouseleave", onMouseLeaveLink);
     })
 
-  });
+  }, [path]);
+
   return (
     <div id="custom-cursor" className="custom-cursor">
     </div>

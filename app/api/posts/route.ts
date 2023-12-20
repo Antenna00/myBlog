@@ -1,10 +1,10 @@
 import { prisma } from "@/app/util/connect";
 import { NextApiRequest } from "next";
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 import { Post } from "@prisma/client";
 
 
-export const GET = async (req:NextApiRequest) => {
+export const GET = async (req:NextRequest) => {
 
     const {searchParams} = new URL(req.url!);
     const page = parseInt(searchParams.get("page") ?? "1", 10);
@@ -12,7 +12,7 @@ export const GET = async (req:NextApiRequest) => {
     const POST_PER_PAGE = 3;
 
     try{
-        const [posts, count] = await prisma.$transaction([
+        const [posts, count] : [Post[], number] = await prisma.$transaction([
          prisma.post.findMany(            
             {
             take: POST_PER_PAGE, 

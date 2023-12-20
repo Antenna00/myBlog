@@ -36,7 +36,8 @@ async function CategoryList() {
           return (
             <Link
               key={i}
-              href={`/blog?cat=${item.slug}`}
+              href="/blog/[cat]"
+              as={`/blog?cat=${item.slug}`}
               className={`flex items-center gap-[10px] h-20 w-48 justify-center 
               border-green-300 border-2 bg-gray-200 
               hover:bg-green-200 transition-all duration-300 rounded-2xl sm:w-full`}

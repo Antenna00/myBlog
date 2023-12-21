@@ -22,6 +22,7 @@ function Cursor() {
   
     };
 
+    gsap.to(cursor, { scale: 1 }); //initialization
     document.addEventListener("mousemove", onMouseMove);
     //
 

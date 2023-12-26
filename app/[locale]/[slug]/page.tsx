@@ -1,8 +1,8 @@
 import React from "react";
-import Menu from "../components/menu/Menu";
+import Menu from "@/app/components/menu/Menu";
 import Image from "next/image";
-import Comments from "../components/comments/Comments";
-import PostView from "../components/postView/PostView";
+import Comments from "@/app/components/comments/Comments";
+import PostView from "@/app/components/postView/PostView";
 
 function SinglePage() {
   return (

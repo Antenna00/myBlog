@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from "react";
-import Upload from "../components/upload/Upload";
+import Upload from "../../components/upload/Upload";
 import Image from "next/image";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";

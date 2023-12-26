@@ -1,5 +1,5 @@
 
-import { prisma } from "@/app/util/connect";
+import { prisma } from "@/app/[locale]/util/connect";
 import { NextApiRequest } from "next";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -12,7 +12,7 @@ export const GET = async (req:NextRequest) => {
             const catImage = await prisma.category.findMany(
                 {
                     where:{
-                        title:"infrastructure"
+                        title:cat
                     }
                 }
             )

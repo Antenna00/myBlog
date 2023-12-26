@@ -1,4 +1,4 @@
-import { prisma } from "@/app/util/connect";
+import { prisma } from "@/app/[locale]/util/connect";
 import { NextApiRequest } from "next";
 import { NextRequest, NextResponse } from "next/server"
 import { Post } from "@prisma/client";

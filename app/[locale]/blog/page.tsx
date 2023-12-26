@@ -1,6 +1,6 @@
 import React from 'react'
-import CardList from '../components/cardList/CardList'
-import Menu from '../components/menu/Menu'
+import CardList from '@/app/components/cardList/CardList'
+import Menu from '@/app/components/menu/Menu'
 import Image from 'next/image'
 
 const getCatImg = async (cat:string) => {
@@ -16,16 +16,20 @@ const getCatImg = async (cat:string) => {
 }
 
 async function page({searchParams} : {searchParams : {page:string; cat:string}}) {
+
   const page = parseInt(searchParams.page) || 1;
   const cat = searchParams.cat;
   const firstCatData = await (await getCatImg(cat)).catImage[0];
-  
+
   return (
     <div>
+      <div className='flex bg-orange-400/10 px-[10px] py-[5px] mt-10 relative justify-evenly items-center'>
         {/* Title */}
-        <h1 className='bg-orange-400 text-white px-[10px] py-[5px] mt-10 text-center text-[35px] font-bold capitalize'>{cat} </h1>
-        <Image src={firstCatData.img} alt="" width={100} height={100}/>
-        
+        <h1 className=' text-center text-[35px] font-bold capitalize'>
+          {cat}
+          </h1>
+        <Image src={firstCatData.img} alt="" width={400} height={400} className='rounded-full'/>
+        </div>
         {/* Content Container */}
         <div className='flex gap-[50px]'>
             <CardList page={page} cat={cat}/>

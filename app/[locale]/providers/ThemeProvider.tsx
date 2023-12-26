@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import { useContext, ReactNode } from "react";
-import { ThemeContext } from "@/app/context/ThemeContext";
+import { ThemeContext } from "@/app/[locale]/context/ThemeContext";
 
 type ThemeContextType = {
     theme: string;

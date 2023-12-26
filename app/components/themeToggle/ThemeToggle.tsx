@@ -2,7 +2,7 @@
 
 import React, { useContext, useEffect } from "react";
 import Image from "next/image"
-import { ThemeContext } from "@/app/context/ThemeContext";
+import { ThemeContext } from "@/app/[locale]/context/ThemeContext";
 
 type ThemeContextType = {
   theme: string;

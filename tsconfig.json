@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/postView/CodeBlock.jsx", "app/components/setTheme/SetTheme.jsx", "app/util/auth.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/postView/CodeBlock.jsx", "app/components/setTheme/SetTheme.jsx", "app/[locale]/util/auth.js"],
   "exclude": ["node_modules"]
 }

@@ -1,17 +1,17 @@
 {
   "Index": {
     "title": "",
-    "secondpage": "This is a second page"
+    "description": "This is a second page"
   },
   "About": {
-    "profile": "",
-    "biography_2017_title": "イーストアングリア大学：入学",
-    "biography_2020_title": "日本に帰国後就職",
+    "profile": "Born and raised in Japan. I am currently working as SWE in Japan. I have broad international background of studying in Thailand for 5 years and 3 years in UK.",
+    "biography_2017_title": "Enrolled in University of East Anglia",
+    "biography_2020_title": "Employed in Japan",
     "biography_2021_title": "某警察署 交通事故管理システム",
     "biography_2022_title": "某市役所 財務および旅費管理システム",
     "biography_2023_title": "某自動車会社 サービス運用準備",
 
-    "biography_2017_desc": "国際バカロレア資格を取得後はイギリスのイーストアングリア大学に進学する。2011年の東日本大震災の被災を遠方からニュースで連日聞く中で、 環境科学を学びたい意志を強くもち、その分野で見識の深い、イーストアングリア大学で環境科学を専攻する",
+    "biography_2017_desc": "Soon after I achieved International Baccarauleate (Diploma), I majored in BSc Environmental Science at University of East Anglia in UK.",
     "biography_2020_desc": "イーストアングリア大学を卒業後は日本に帰国し、太陽光発電機器の技術営業職に就くが、 営業として技術に関わるに連れて自らモノづくりに携わりたいという気持ちが強くなっていき、SES事業会社、S社へ転職する。",
     "biography_2021_desc": "APとして改修案件に開発工程から携わる。 ウォーターフォール開発の中で設計書修正、開発着手からテスト設計や実施まで幅広く関わる。 技術スタック：Spring Framework, ThymeLeaf, MyBatis等",
     "biography_2022_desc": "改修案件に開発工程から携わる。 WBSの管理やSIerとの折衝含め、開発工程にも自ら着手する。.NetFrameworkとSpring Frameworkの両フレームワークを用いたマイクロサービスに着手し、法規対応や旅費価格改定にあたって内部仕様の変更にあたった。",

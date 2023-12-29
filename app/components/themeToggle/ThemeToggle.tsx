@@ -1,5 +1,5 @@
 "use client"
-
+//TODO This file is not in use
 import React, { useContext, useEffect } from "react";
 import Image from "next/image"
 import { ThemeContext } from "@/app/[locale]/context/ThemeContext";

@@ -5,6 +5,8 @@ import AuthLinks from "../authLinks/AuthLinks";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
 import dynamic from "next/dynamic";
+import LangSwitch from "../langSwitch/LangSwitch";
+
 const SetTheme = dynamic(() => import('../setTheme/SetTheme'), {
   ssr: false,
 });
@@ -27,9 +29,11 @@ function Navbar() {
         <Image src="/github.png" alt="" width={24} height={24}></Image>
         </button>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden items-center gap-10">
 
           <SetTheme />
+
+          <LangSwitch />
 
         </div>
       </div>

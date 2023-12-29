@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Title from "./Title";
+import { useTranslations } from "next-intl";
 
 function Featured() {
+  const homeText = useTranslations("Index")
   return (
     //Feature Container
     <div className="mt-[30px]">
@@ -33,16 +35,10 @@ function Featured() {
         <div className="flex-1 flex flex-col gap-[20px] justify-center">
           {/* Post title */}
           <h1 className="text-[40px] font-semibold sm:text-[20px]">
-            Lorem ipsum dolor sits amet consectesur adipisicing elit.
+            {homeText("title")}
           </h1>
-          <p className="text-[20px] font-light text-[color:var(--softTextColor)] sm:text-[15px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            libero reprehenderit neque iure sint natus similique consequatur non
-            perspiciatis? Officiis quaerat optio officia odio nobis? Alias,
-            unde. Sunt, sint nam. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Maxime libero reprehenderit neque iure sint natus
-            similique consequatur non perspiciatis? Officiis quaerat optio
-            officia odio nobis? Alias, unde. Sunt, sint nam.
+          <p className="text-[20px] font-light text-[color:var(--softTextColor)] sm:text-[15px] whitespace-pre-line">
+            {homeText("description")}
           </p>
           <button className="w-max font-semibold rounded-sm pt-[16px] pb-[20px] px-4 text-black bg-gray-300">
             {" "}

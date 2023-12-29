@@ -2,6 +2,7 @@
 import axios, { AxiosResponse } from "axios";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function contact() {
 
@@ -33,7 +34,6 @@ const onSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
   }
 };
 
-  
   return (
     //TODO flex1 でxl >画像追加。
     <div className="flex justify-evenly">

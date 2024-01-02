@@ -7,14 +7,14 @@
     "profile": "Born and raised in Japan. I am currently working as SWE in Japan. I have broad international background of studying in Thailand for 5 years and 3 years in UK.",
     "biography_2017_title": "Enrolled in University of East Anglia",
     "biography_2020_title": "Employed in Japan",
-    "biography_2021_title": "某警察署 交通事故管理システム",
-    "biography_2022_title": "某市役所 財務および旅費管理システム",
-    "biography_2023_title": "某自動車会社 サービス運用準備",
+    "biography_2021_title": "Police Admission: Traffic Accident Management System",
+    "biography_2022_title": "Government Office: Accounting & Travel Expense Management System",
+    "biography_2023_title": "Vehicle Industry: Mobile App Operation Preparation",
 
     "biography_2017_desc": "Soon after I achieved International Baccarauleate (Diploma), I majored in BSc Environmental Science at University of East Anglia in UK.",
-    "biography_2020_desc": "イーストアングリア大学を卒業後は日本に帰国し、太陽光発電機器の技術営業職に就くが、 営業として技術に関わるに連れて自らモノづくりに携わりたいという気持ちが強くなっていき、SES事業会社、S社へ転職する。",
-    "biography_2021_desc": "APとして改修案件に開発工程から携わる。 ウォーターフォール開発の中で設計書修正、開発着手からテスト設計や実施まで幅広く関わる。 技術スタック：Spring Framework, ThymeLeaf, MyBatis等",
-    "biography_2022_desc": "改修案件に開発工程から携わる。 WBSの管理やSIerとの折衝含め、開発工程にも自ら着手する。.NetFrameworkとSpring Frameworkの両フレームワークを用いたマイクロサービスに着手し、法規対応や旅費価格改定にあたって内部仕様の変更にあたった。",
-    "biography_2023_desc": "車両の遠隔管理を行うアプリの運用準備。サポートデスク観点から新規リージョンのエスカレーションフロー構築などにPMとして携わる。"
+    "biography_2020_desc": "Returned to Japan and joined the solar panel industry as sales after graduated from the university. As my interest in the engineering industry built up, I transferred my job to become SWE.",
+    "biography_2021_desc": "I was first assigned in development project of traffic accident management system as PG. The development was in waterfall and I was involved from manufacturing process until release, including the test design.\n[Tech Stack]:\nSpring Framework, ThymeLeaf, MyBatis, OracleDB",
+    "biography_2022_desc": "Development project of microservices built from .Net and Spring. I was assigned as PG although I was also involved in major decision making, management of WBS and communications with customers system as PG. \n[Tech Stack]:\nSpring Framework, .NET Framework, ThymeLeaf, MyBatis, OracleDB",
+    "biography_2023_desc": "I was assigned as PM (Preparation Manager) of operation preparation. The preparation involves the analysis of new vehicle services and its effect on connected cars mobile app from support desk side of view."
   }
 }

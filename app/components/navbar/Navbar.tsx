@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import AuthLinks from "../authLinks/AuthLinks";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 import BurgerMenu from "../burgerMenu/BurgerMenu";

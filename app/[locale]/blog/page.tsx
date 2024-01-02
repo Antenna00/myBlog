@@ -23,7 +23,7 @@ async function page({searchParams} : {searchParams : {page:string; cat:string}})
 
   return (
     <div>
-      <div className='flex bg-orange-400/10 px-[10px] py-[5px] mt-10 relative justify-evenly items-center'>
+      <div className='flex bg-blue-800/30 h-[300px] px-[10px] py-[5px] my-[100px] relative justify-evenly items-center'>
         {/* Title */}
         <h1 className=' text-center text-[35px] font-bold capitalize'>
           {cat}

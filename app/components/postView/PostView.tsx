@@ -17,7 +17,7 @@ import BlogImage from "./BlogImage";
 
 //TODO Darkmode Lightmode setting if i have time.
 //TODO TRのデザイン
-function PostView() {
+function PostView({content} : {content: string}) {
   const [markdown, setMarkdown] = useState("");
 
   useEffect(() => {
@@ -49,7 +49,7 @@ function PostView() {
           rehypeRaw,
         ]}
       >
-        {markdown}
+        {content}
       </ReactMarkdown>
     </div>
   );

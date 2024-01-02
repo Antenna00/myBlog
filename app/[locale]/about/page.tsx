@@ -106,7 +106,7 @@ function Page({params: {locale}} : {params: {locale:string}}) {
 
       <h1 className="text-3xl font-bold text-center mt-10">BIOGRAPHY</h1>
 
-      <div className="timeline">
+      <div className="timeline whitespace-pre-line">
         <ul className="">
           <li className="">
             <div className="date after:border-[0.3px] bg-[color:#41516C] before:bg-[color:#41516C] after:bg-[color:black]">

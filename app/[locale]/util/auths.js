@@ -5,6 +5,7 @@ const { GITHUB_ID, GITHUB_SECRET, GOOGLE_ID, GOOGLE_SECRET } = process.env;
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import { PrismaClient } from "@prisma/client"
 import { prisma } from "./connect";
+import { getServerSession } from "next-auth";
 
 export const authOptions = {
     adapter:PrismaAdapter(prisma),
@@ -21,4 +22,6 @@ export const authOptions = {
             }
           }),
     ]
-}
+};
+
+export const getAuthSession = () => getServerSession(authOptions);

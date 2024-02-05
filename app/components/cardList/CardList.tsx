@@ -34,11 +34,11 @@ async function CardList({page, cat} : {page:number; cat?:string}) {
 
   const {posts, count} = await getPostsData(page, cat!);
   const POST_PER_PAGE = 3;
-
   const hasPrev = page > 1 //If true, user can go back the page
   const hasNext = count - (POST_PER_PAGE * page) > 0 //if true, user can go to next page
 
   return (
+    <>
     <div className=" flex flex-col flex-[5]">
       {/* Title */}
       <h1 className="text-3xl font-bold my-12">Recent Posts</h1>
@@ -51,6 +51,7 @@ async function CardList({page, cat} : {page:number; cat?:string}) {
       </div>
       <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext}/>
     </div>
+    </>
   );
 }
 

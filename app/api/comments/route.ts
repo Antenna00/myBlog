@@ -44,6 +44,6 @@ export const POST = async (req:NextRequest) => {
         })
         return NextResponse.json(comment, { status:200 });
     } catch (err) {
-        return NextResponse.json({ error: 'Something went wrong! (GET comments api)'}, { status: 500 })
+        return NextResponse.json({ error: 'Something went wrong! (POST comments api)'}, { status: 500 })
     }
 }

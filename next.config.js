@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {  
 
-    reactStrictMode: true,
     images: {
       
 
@@ -27,7 +26,7 @@ const withNextIntl = require('next-intl/plugin')();
  
 module.exports = withNextIntl({
   // Other Next.js configuration ...
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     
 

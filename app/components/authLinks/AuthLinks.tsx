@@ -2,7 +2,7 @@
 "use client"
 
 import React, { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
 import { signOut, useSession } from "next-auth/react";
 

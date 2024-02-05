@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React from "react";
 import Image from "next/image";
 
@@ -24,10 +24,11 @@ const getCategoriesData = async () => {
 async function CategoryList() {
   const data: categories[] = await getCategoriesData();
 
+
   return (
     //Container
     <div className="flex flex-col h-max">
-
+      
       {/* Title */}
       <h1 className="my-12 text-3xl font-bold">Main Categories</h1>      
 

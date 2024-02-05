@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Link } from "@/navigation";
+import Link from "next/link";
 import { postDataType } from "../cardList/CardList";
 
 
@@ -10,11 +10,6 @@ import { postDataType } from "../cardList/CardList";
 
 //TODO Why is it not a DATE???????
 async function Card({item} : CardProps) {
-
-  // console.log("item.dateUploaded:", item.dateUploaded);
-  // console.log(typeof item.dateUploaded === 'string');
-  // console.log(item.imgUrls);
-  // console.log("typeof", Array.isArray(item.imgUrls));
 
   const dateUploaded = new Date(item.dateUploaded);
   const date = dateUploaded.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });

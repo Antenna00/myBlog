@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import { GrLanguage } from "react-icons/gr";
 import { useRouter } from '@/navigation';
 import { usePathname } from '@/navigation';
+import { useSearchParams } from 'next/navigation';
+
 import { Link } from '@/navigation';
 import Router from 'next/router';
 
@@ -26,8 +28,15 @@ function LangSwitch() {
   // };
 
   const push = async(targetLocale) => {
-    router.push(pathname, { locale: targetLocale }); // Use `await` for push
-    console.log("pushed")
+    const currentCatParam = searchParams.get('cat');
+    console.log(currentCatParam)
+    if(currentCatParam) {
+      console.log("catParam detected")
+      const catPathname = pathname + `?cat=${currentCatParam}`;
+      router.push(catPathname, { locale: targetLocale }); // Use `await` for push
+    }else{
+      router.push(pathname,undefined, { locale: targetLocale }); // Use `await` for push
+    }
   }
 
 
@@ -35,6 +44,9 @@ function LangSwitch() {
   const cookieValue = getCookie("NEXT_LOCALE")
 
   const pathname = usePathname();
+
+  const searchParams = useSearchParams()
+  const catParam = searchParams.get('cat')
 
   //TODO I dont know why this is happening. the value in local storage and what it is on view is different > theme :(
   const langToggle = async () => {

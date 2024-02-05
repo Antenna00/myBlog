@@ -66,7 +66,7 @@ async function SinglePage({ params } : { params: paramsPropType}) {
             <div className="w-[50px] h-[50px] relative">
               {data.user.image ? (
               <Image
-                src={`https://lh3.googleusercontent.com/a/ACg8ocJm__fx4vkIAx7WteU0kT4V9aPTjygYK4YL2IoreBmC=s96-c`}
+                src={data.user.image}
                 alt=""
                 fill
                 className="rounded-full object-cover"

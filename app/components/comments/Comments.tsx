@@ -34,6 +34,7 @@ type commentType = {
 function Comments({ postSlug }: { postSlug: string }) {
   // const [loginStat, setLoginStat] = useState(false);
   const { status } = useSession();
+  const [ desc, setDesc ] = useState("");
   const { data, isLoading } = useSWR(
     `http://localhost:3000/api/comments?postSlug=${postSlug}`,
     fetcher,
@@ -66,6 +67,7 @@ function Comments({ postSlug }: { postSlug: string }) {
             id=""
             cols={30}
             className="p-[20px] w-full border-[1px]"
+            onChange={e => setDesc(e.target.value)}
           ></textarea>
           <button className="py-[16px] px-[20px] bg-green-500 text-white font-bold border-none rounded-md cursor-pointer">
             Send
